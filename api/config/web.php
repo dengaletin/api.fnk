@@ -1,0 +1,38 @@
+<?php
+
+$config = [
+    'id' => 'app',
+    'components' => [
+        'user' => [
+            'identityClass' => 'app\models\User',
+            'enableAutoLogin' => true,
+            'loginUrl' => ['site/login'],
+        ],
+        'errorHandler' => [
+            'errorAction' => 'site/error',
+        ],
+        'assetManager' => [
+            'linkAssets' => true,
+        ],
+        'request' => [
+            'cookieValidationKey' => '',
+            'parsers' => [
+                'application/json' => 'yii\web\JsonParser',
+            ]
+        ],
+        'log' => [
+            'traceLevel' => YII_DEBUG ? 3 : 0,
+        ],
+    ],
+];
+
+if (YII_ENV_DEV) {
+    // configuration adjustments for 'dev' environment
+    $config['bootstrap'][] = 'debug';
+    $config['modules']['debug'] = 'yii\debug\Module';
+
+    $config['bootstrap'][] = 'gii';
+    $config['modules']['gii'] = 'yii\gii\Module';
+}
+
+return $config;
