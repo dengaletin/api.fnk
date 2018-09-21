@@ -1,12 +1,9 @@
 <?php
 
-use app\components\grid\ToggleColumn;
 use app\models\News;
-use app\models\Group;
-use app\models\Mode;
-use yii\helpers\ArrayHelper;
-use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\helpers\Html;
+use yii\helpers\StringHelper;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\search\NewsSearch */
@@ -36,11 +33,41 @@ $this->params['breadcrumbs'][] = $this->title;
         'filterModel' => $searchModel,
         'filterSelector' => 'select[name="per-page"]',
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
             'id',
-            'title',
-            'text:ntext',
+            'source.post_time',
             'date',
+            [
+                'attribute' => 'source.source_host',
+                'value' => function (News $model) {
+                    return Html::a(Html::encode($model->source->source_host),
+                        $model->source->source_url,
+                        ['target' => '_blank']);
+                },
+                'format' => 'raw',
+            ],
+            'title',
+            [
+                'attribute' => 'text',
+                'value' => function ($model) {
+                    return StringHelper::truncateWords($model->text, 20, '...', false);
+                }
+            ],
+            [
+                'attribute' => 'company.name',
+                'value' => function (News $model) {
+                    return Html::a(Html::encode($model->company->name),
+                        ['companies/view', 'id' => $model->company->id],
+                        ['target' => '_blank']);
+                },
+                'format' => 'raw',
+            ],
+            [
+                'attribute' => 'logo',
+                'value' => function (News $data) {
+                    return $data->photos ? Html::img($data->photos[0]->getThumbFileUrl('file'), ['width' => 50, 'height' => 50, 'style' => 'border: 1px solid #ccc']) : '';
+                },
+                'format' => 'raw',
+            ],
             'publish:boolean',
             ['class' => 'yii\grid\ActionColumn'],
         ],

@@ -2,10 +2,9 @@
 
 namespace app\models\search;
 
-use Yii;
+use app\models\News;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\News;
 
 /**
  * NewsSearch represents the model behind the search form about `app\models\News`.
@@ -41,7 +40,7 @@ class NewsSearch extends News
      */
     public function search($params)
     {
-        $query = News::find();
+        $query = News::find()->joinWith(['source source', 'company company']);
 
         // add conditions that should always apply here
 
@@ -49,7 +48,14 @@ class NewsSearch extends News
             'query' => $query,
             'pagination' => [
                 'pageSizeLimit' => [1, 100000],
-            ]
+            ],
+            'sort' => [
+                'attributes' => array_merge(array_keys($this->attributes), [
+                    'source.post_time',
+                    'source.source_host',
+                    'company.name',
+                ])
+            ],
         ]);
 
         $this->load($params);

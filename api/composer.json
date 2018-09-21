@@ -23,7 +23,8 @@
         "yii-dream-team/yii2-upload-behavior": "^1.0",
         "alxmsl/appstoreclient": "^1.2",
         "2amigos/yii2-file-upload-widget": "~1.0",
-        "paragraph1/php-fcm": "^0.7.0"
+        "paragraph1/php-fcm": "^0.7.0",
+        "symfony/dom-crawler": "^3.4"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "*",

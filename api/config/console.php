@@ -1,6 +1,9 @@
 <?php
 
+use app\components\parser\ParsersController;
+
 Yii::setAlias('@tests', dirname(__DIR__) . '/tests');
+Yii::$classMap['app\components\parser\ParsersController'] = __DIR__ . '/../components/parser/ParsersController.php';
 
 return [
     'id' => 'app-console',
@@ -8,5 +11,10 @@ return [
     'controllerNamespace' => 'app\commands',
     'modules' => [
         'gii' => 'yii\gii\Module',
+    ],
+    'controllerMap' => [
+        'parsers' => [
+            'class' => ParsersController::className()
+        ],
     ],
 ];

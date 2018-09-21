@@ -1,8 +1,5 @@
 <?php
 
-use app\models\Group;
-use app\models\Mode;
-use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -28,21 +25,22 @@ use yii\widgets\ActiveForm;
             <?= $form->field($model, 'text')->textarea(['rows' => 6]) ?>
         </div>
     </div>
-    
+
     <div class="row">
         <div class="col-md-12">
             <?= $form->field($model, 'date')->textInput(['maxlength' => 255]) ?>
         </div>
     </div>
-    
+
     <div class="row">
         <div class="col-md-12">
             <?= $form->field($model, 'publish')->checkbox() ?>
         </div>
     </div>
-    
+
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Добавить' : 'Сохранить', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= Html::submitButton($model->isNewRecord ? 'Добавить' : 'Сохранить',
+            ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

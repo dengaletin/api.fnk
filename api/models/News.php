@@ -1,8 +1,6 @@
 <?php
-namespace app\models;
 
-use Yii;
-use app\models\query\CompanyQuery;
+namespace app\models;
 
 /**
  * This is the model class for table "{{%news}}".
@@ -12,6 +10,9 @@ use app\models\query\CompanyQuery;
  * @property string $text
  * @property string $date
  * @property boolean $publish
+ * @property-read Company $company
+ * @property-read ParserJobs $source
+ * @property-read NewsPhoto[] $photos
  */
 class News extends \yii\db\ActiveRecord
 {
@@ -29,6 +30,7 @@ class News extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['publish'], 'default', 'value' => '0'],
             [['title', 'text', 'publish'], 'required'],
             [['text'], 'string'],
             [['date'], 'safe'],
@@ -46,11 +48,11 @@ class News extends \yii\db\ActiveRecord
             'id' => 'ID',
             'title' => 'Заголовок',
             'text' => 'Текст',
-            'date' => 'Дата',
+            'date' => 'Дата ifinik',
             'publish' => 'Опубликовать',
         ];
     }
-    
+
     /**
      * @return \yii\db\ActiveQuery
      */
@@ -58,19 +60,35 @@ class News extends \yii\db\ActiveRecord
     {
         return $this->hasMany(NewsPhoto::className(), ['news_id' => 'id'])->inverseOf('news');
     }
-    
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getSource()
+    {
+        return $this->hasOne(ParserJobs::className(), ['article_id' => 'id'])->inverseOf('article');
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getCompany()
+    {
+        return $this->hasOne(Company::className(), ['id' => 'company_id'])->via('source');
+    }
+
     public function beforeSave($insert)
     {
         $this->date = date('Y-m-d H:i', strtotime($this->date));
-        
+
         return parent::beforeSave($insert);
     }
 
     public function afterFind()
     {
         $this->date = date('d.m.Y H:i', strtotime($this->date));
-        
+
         return true;
     }
-    
+
 }

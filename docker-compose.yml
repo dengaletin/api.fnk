@@ -1,0 +1,43 @@
+version: "3.0"
+networks:
+  nginx-proxy:
+    external: true
+  backend:
+    internal: true
+services:
+  db:
+    image: mysql:5
+    networks:
+      - backend
+    environment:
+      MYSQL_ROOT_PASSWORD: qwerty
+      MYSQL_DATABASE: api
+    volumes:
+      - ./docker/mysql/data:/var/lib/mysql
+  pma:
+    image: phpmyadmin/phpmyadmin:latest
+    networks:
+      - nginx-proxy
+      - backend
+    environment: 
+      PMA_HOST: db
+      PMA_USER: root
+      PMA_PASSWORD: qwerty
+      VIRTUAL_HOST: pma.localhost
+  php:
+    build:
+      context: ./docker/php
+      #dockerfile: ./docker/php/Dockerfile
+    networks:
+      - backend
+      - nginx-proxy
+    volumes:
+      - ./api:/app
+    environment: 
+      VIRTUAL_HOST: api.localhost
+  cron:
+    image: mcuadros/ofelia:latest
+    volumes:
+      - ./docker/ofelia:/etc/ofelia
+    networks: 
+      - backend
