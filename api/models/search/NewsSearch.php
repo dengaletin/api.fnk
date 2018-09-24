@@ -50,6 +50,7 @@ class NewsSearch extends News
                 'pageSizeLimit' => [1, 100000],
             ],
             'sort' => [
+                'defaultOrder' => ['date' => SORT_DESC],
                 'attributes' => array_merge(array_keys($this->attributes), [
                     'source.post_time',
                     'source.source_host',
