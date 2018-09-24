@@ -6,7 +6,6 @@ use yii\data\ActiveDataProvider;
 use yii\grid\GridView;
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-use Yii;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Company */
