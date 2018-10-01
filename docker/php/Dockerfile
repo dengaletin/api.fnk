@@ -1,10 +1,15 @@
 FROM php:7.1-cli
 
 RUN apt-get update && apt-get install -y \
-    libpng-dev && \
-    php -i && \
-    docker-php-ext-install --help && \
-    docker-php-ext-install -j$(nproc) pdo pdo_mysql gd zip
+    libpng-dev \
+    libjpeg-dev \
+    libfreetype6-dev \
+    && docker-php-ext-install --help \
+    && docker-php-ext-configure gd \
+                                --with-freetype-dir=/usr/include/ \
+                                --with-jpeg-dir=/usr/include/ \
+                                --with-png-dir=/usr/include/ \
+    && docker-php-ext-install -j$(nproc) pdo pdo_mysql gd zip
 
 RUN yes | pecl install xdebug
 
