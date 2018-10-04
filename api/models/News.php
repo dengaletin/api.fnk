@@ -10,7 +10,7 @@ namespace app\models;
  * @property string $text
  * @property string $date
  * @property boolean $publish
- * @property-read Company $company
+ * @property-read Company[] $companies
  * @property-read ParserJobs $source
  * @property-read NewsPhoto[] $photos
  */
@@ -72,9 +72,10 @@ class News extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getCompany()
+    public function getCompanies()
     {
-        return $this->hasOne(Company::className(), ['id' => 'company_id'])->via('source');
+        return $this->hasMany(Company::className(), ['id' => 'company_id'])
+            ->viaTable('{{%news_companies}}', ['news_id' => 'id']);
     }
 
     public function beforeSave($insert)

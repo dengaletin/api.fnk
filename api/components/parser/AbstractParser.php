@@ -73,15 +73,14 @@ abstract class AbstractParser
                 foreach ($companies as $company) {
 
                     if (preg_match($company['preg_condition'], $node->text())) {
-                        $meta['company'] = $company;
+                        $meta['companies'][] = $company;
                         Console::stdout(' Найдена компания #'.$company['id'] . PHP_EOL);
-                        break;
                     }
                 };
 
 
 
-                if (!$meta['company'] || $this->isAlreadyParsed($meta['link'])) {
+                if (!count($meta['companies']) || $this->isAlreadyParsed($meta['link'])) {
                     Console::stdout('Не подходит!' . PHP_EOL);
                     return;
                 }
@@ -102,12 +101,20 @@ abstract class AbstractParser
                     'date' => (new \DateTime())->format('Y-m-d H:i:s'),
                 ]);
                 if ($model->save()) {
+                    foreach ($meta['companies'] as $company)
+                    {
+                        \Yii::$app->db->createCommand()->insert('{{%news_companies}}', [
+                            'news_id' => $model->id,
+                            'company_id' => $company['id'],
+                        ])->execute();
+                    }
                     $model = new ParserJobs([
                         'source_url' => $meta['link'],
                         'article_id' => $model->id,
-                        'company_id' => $meta['company']['id'],
+                        //'company_id' => $meta['company']['id'],
                         'post_time' => $meta['pubDate'],
                     ]);
+
                     $model->save();
                 }
             });

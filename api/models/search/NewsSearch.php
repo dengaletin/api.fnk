@@ -40,7 +40,7 @@ class NewsSearch extends News
      */
     public function search($params)
     {
-        $query = News::find()->joinWith(['source source', 'company company']);
+        $query = News::find()->joinWith(['source source', 'companies companies']);
 
         // add conditions that should always apply here
 
@@ -54,7 +54,7 @@ class NewsSearch extends News
                 'attributes' => array_merge(array_keys($this->attributes), [
                     'source.post_time',
                     'source.source_host',
-                    'company.name',
+                    'companies.name',
                 ])
             ],
         ]);

@@ -2,6 +2,7 @@
 
 use app\models\News;
 use yii\grid\GridView;
+use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\helpers\StringHelper;
 
@@ -53,11 +54,12 @@ $this->params['breadcrumbs'][] = $this->title;
                 }
             ],
             [
-                'attribute' => 'company.name',
-                'value' => function (News $model) {
-                    return Html::a(Html::encode($model->company->name),
-                        ['companies/view', 'id' => $model->company->id],
-                        ['target' => '_blank']);
+                'attribute' => 'companies.name',
+                'value' => function (News $model) {// TODO: Галочка здесь!
+                    return implode(', ',array_map(function (){}, $model->companies, 'id', 'name'));
+//                    return Html::a(Html::encode($model->companyies->name),
+//                        ['companies/view', 'id' => $model->company->id],
+//                        ['target' => '_blank']);
                 },
                 'format' => 'raw',
             ],

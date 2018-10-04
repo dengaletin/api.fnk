@@ -11,11 +11,9 @@ use Yii;
  * @property string $source_url
  * @property string $source_host
  * @property integer $article_id
- * @property integer $company_id
  * @property string $post_time
  * @property string $parse_time
  * @property-read News $article
- * @property-read Company $company
  */
 class ParserJobs extends \yii\db\ActiveRecord
 {
@@ -33,8 +31,8 @@ class ParserJobs extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['source_url', 'source_host', 'article_id', 'company_id'], 'required'],
-            [['article_id', 'company_id'], 'integer'],
+            [['source_url', 'source_host', 'article_id'], 'required'],
+            [['article_id'], 'integer'],
             [['post_time', 'parse_time'], 'safe'],
             [['source_url', 'source_host'], 'string', 'max' => 255],
         ];
@@ -50,7 +48,6 @@ class ParserJobs extends \yii\db\ActiveRecord
             'source_url' => 'Адрес источника',
             'source_host' => 'Хост источника',
             'article_id' => 'Новость',
-            'company_id' => 'Компания',
             'post_time' => 'Дата источника',
             'parse_time' => 'Дата парсинга',
         ];
@@ -62,14 +59,6 @@ class ParserJobs extends \yii\db\ActiveRecord
     public function getArticle()
     {
         return $this->hasOne(News::className(), ['id' => 'article_id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getCompany()
-    {
-        return $this->hasOne(Company::className(), ['id' => 'company_id']);
     }
 
     public function beforeValidate()
