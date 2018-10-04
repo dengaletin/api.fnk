@@ -55,18 +55,20 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
             [
                 'attribute' => 'companies.name',
-                'value' => function (News $model) {// TODO: Галочка здесь!
-                    return implode(', ',array_map(function (){}, $model->companies, 'id', 'name'));
-//                    return Html::a(Html::encode($model->companyies->name),
-//                        ['companies/view', 'id' => $model->company->id],
-//                        ['target' => '_blank']);
+                'value' => function (News $model) {
+                    return implode(', ', array_map(function (\app\models\Company $company) {
+                        return Html::a(Html::encode($company->name),
+                            ['companies/view', 'id' => $company->id],
+                            ['target' => '_blank']);
+                    }, $model->companies));
                 },
                 'format' => 'raw',
             ],
             [
                 'attribute' => 'logo',
                 'value' => function (News $data) {
-                    return $data->photos ? Html::img($data->photos[0]->getThumbFileUrl('file'), ['width' => 50, 'height' => 50, 'style' => 'border: 1px solid #ccc']) : '';
+                    return $data->photos ? Html::img($data->photos[0]->getThumbFileUrl('file'),
+                        ['width' => 50, 'height' => 50, 'style' => 'border: 1px solid #ccc']) : '';
                 },
                 'format' => 'raw',
             ],
