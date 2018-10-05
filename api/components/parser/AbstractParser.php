@@ -7,7 +7,10 @@ use app\models\Company;
 use app\models\News;
 use app\models\ParserJobs;
 use Symfony\Component\DomCrawler\Crawler;
+use Symfony\Component\HttpFoundation\FileBag;
+use Symfony\Component\HttpFoundation\Request;
 use yii\helpers\Console;
+use yii\helpers\Url;
 
 abstract class AbstractParser
 {
@@ -118,6 +121,34 @@ abstract class AbstractParser
                     $model->save();
                 }
             });
+    }
+
+    public function attachFile($url = 'http://s0.rbk.ru/v6_top_pics/media/img/8/33/755386905721338.jpeg', $news_id = 1)
+    {
+        \Yii::$app->urlManager->setBaseUrl(getenv('VIRTUAL_HOST'));
+        \Yii::$app->urlManager->setHostInfo(getenv('VIRTUAL_HOST'));
+        $file = file_get_contents($url);
+        $filename = '/tmp/' . md5($file.microtime(false)); var_dump($filename);
+        file_put_contents($filename, $file);
+
+
+        $request = new Request(
+            [], //$_GET,
+            [
+                'NewsPhotoForm' => [
+                    'imageFiles' => [
+                        0 => ''
+                    ]
+                ]
+            ],
+            array(),
+            $_COOKIE,
+            (new FileBag([])),
+            $_SERVER
+        );
+
+
+        var_dump(Url::to(['news/view', 'id'=> $news_id]));die();
     }
 
 }

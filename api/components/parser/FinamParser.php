@@ -18,6 +18,7 @@ class FinamParser extends AbstractParser
 
     function fetch($url)
     {
+        $this->attachFile();
         $crawler = new Crawler();
         if ($url == static::URL) {
             $crawler->addXmlContent(file_get_contents($url));
