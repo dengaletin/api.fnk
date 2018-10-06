@@ -73,22 +73,26 @@ abstract class AbstractParser
             ->each(function (Crawler $node) {
                 $companies = $this->getCandidates();
                 $meta = $this->buildMeta($node);
-                Console::stdout('Статья: ' . $meta['title'] . '... ');
+                Console::stdout('Статья: ' . $meta['title'] . '... ' . PHP_EOL);
                 foreach ($companies as $company) {
 
                     if (preg_match($company['preg_condition'], $node->text())) {
                         $meta['companies'][] = $company;
-                        Console::stdout(' Найдена компания #' . $company['id'] . PHP_EOL);
+                        Console::stdout(' [!] Найдена компания #' . $company['id'] . PHP_EOL);
                     }
                 };
 
 
-                if (!count($meta['companies']) || $this->isAlreadyParsed($meta['link'])) {
-                    Console::stdout('Не подходит!' . PHP_EOL);
+                if (!count($meta['companies'])) {
+                    Console::stdout(' [-] Не подходит!' . PHP_EOL);
+                    return;
+                }
+                if ($this->isAlreadyParsed($meta['link'])) {
+                    Console::stdout(' [-] Уже собирали!' . PHP_EOL);
                     return;
                 }
 
-                Console::stdout($meta['link'] . PHP_EOL);
+                Console::stdout('[+]' . $meta['link'] . PHP_EOL);
 
                 $meta['text'] = trim(preg_replace(
                     '/(\s|\n|\t|\r){2,}/',
