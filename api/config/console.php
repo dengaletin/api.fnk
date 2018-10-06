@@ -12,6 +12,9 @@ return [
     'modules' => [
         'gii' => 'yii\gii\Module',
     ],
+    'aliases' => [
+        '@webroot' => dirname(__DIR__) . '/web'
+    ],
     'controllerMap' => [
         'parsers' => [
             'class' => ParsersController::className()

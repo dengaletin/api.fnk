@@ -5,8 +5,10 @@ namespace app\components\parser;
 
 use app\models\Company;
 use app\models\News;
+use app\models\NewsPhoto;
 use app\models\ParserJobs;
 use Symfony\Component\DomCrawler\Crawler;
+use yii\helpers\ArrayHelper;
 use yii\helpers\Console;
 
 abstract class AbstractParser
@@ -19,6 +21,7 @@ abstract class AbstractParser
     const DATE_SELECTOR = 'pubDate';
     const TITLE_SELECTOR = 'title';
     const ARTICLE_SELECTOR = '.article__text';
+    const RSS_IMAGE_SELECTOR = null;
 
     private function getCandidates()
     {
@@ -57,6 +60,7 @@ abstract class AbstractParser
                 new \DateTimeZone(static::TIMEZONE)))
                 ->format('y-m-d H:i:s'),
             'link' => trim($node->filter(static::LINK_SELECTOR)->eq(0)->text()),
+            'image_url' => $this->fetchImage($node)
         ];
     }
 
@@ -74,10 +78,9 @@ abstract class AbstractParser
 
                     if (preg_match($company['preg_condition'], $node->text())) {
                         $meta['companies'][] = $company;
-                        Console::stdout(' Найдена компания #'.$company['id'] . PHP_EOL);
+                        Console::stdout(' Найдена компания #' . $company['id'] . PHP_EOL);
                     }
                 };
-
 
 
                 if (!count($meta['companies']) || $this->isAlreadyParsed($meta['link'])) {
@@ -101,12 +104,15 @@ abstract class AbstractParser
                     'date' => (new \DateTime())->format('Y-m-d H:i:s'),
                 ]);
                 if ($model->save()) {
-                    foreach ($meta['companies'] as $company)
-                    {
+                    foreach ($meta['companies'] as $company) {
                         \Yii::$app->db->createCommand()->insert('{{%news_companies}}', [
                             'news_id' => $model->id,
                             'company_id' => $company['id'],
                         ])->execute();
+                    }
+
+                    if ($image_url = ArrayHelper::getValue($meta, 'image_url')) {
+                        $this->attachImage($image_url, $model->id);
                     }
                     $model = new ParserJobs([
                         'source_url' => $meta['link'],
@@ -114,10 +120,32 @@ abstract class AbstractParser
                         //'company_id' => $meta['company']['id'],
                         'post_time' => $meta['pubDate'],
                     ]);
-
                     $model->save();
                 }
             });
+    }
+
+    public function fetchImage(Crawler $node)
+    {
+        return null;
+    }
+
+
+    public function attachImage($url, $news_id)
+    {
+        $m = new NewsPhoto();
+        $m->news_id = $news_id;
+        $m->file = md5($url) . '.' . pathinfo($url, PATHINFO_EXTENSION);
+
+        file_put_contents(
+            $m->resolvePath($m->filePath),
+            file_get_contents($url)
+        );
+
+        if ($m->save()) {
+            $m->createThumbs();
+        }
+
     }
 
 }
