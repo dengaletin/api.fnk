@@ -33,7 +33,7 @@ class News extends \yii\db\ActiveRecord
             [['publish'], 'default', 'value' => '0'],
             [['title', 'text', 'publish'], 'required'],
             [['text'], 'string'],
-            [['date'], 'safe'],
+            [['date', 'companies'], 'safe'],
             [['publish'], 'boolean'],
             [['title'], 'string', 'max' => 255],
         ];
@@ -76,6 +76,22 @@ class News extends \yii\db\ActiveRecord
     {
         return $this->hasMany(Company::className(), ['id' => 'company_id'])
             ->viaTable('{{%news_companies}}', ['news_id' => 'id']);
+    }
+
+    public function setCompanies($values)
+    {
+        \Yii::$app->db->createCommand()->delete('{{%news_companies}}',
+            [
+                'news_id'=>$this->id
+            ])->execute();
+
+        foreach ($values as $value)
+        {
+            \Yii::$app->db->createCommand()->insert('{{%news_companies}}', [
+                'news_id' => $this->id,
+                'company_id' => (int)$value,
+            ])->execute();
+        }
     }
 
     public function beforeSave($insert)

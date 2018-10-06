@@ -24,7 +24,7 @@
         "alxmsl/appstoreclient": "^1.2",
         "2amigos/yii2-file-upload-widget": "~1.0",
         "paragraph1/php-fcm": "^0.7.0",
-        "symfony/dom-crawler": "^3.4"
+        "kartik-v/yii2-widget-select2": "^2.1"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "*",
@@ -35,7 +35,11 @@
         "guzzlehttp/guzzle": ">=4.1.4 <7.0"
     },
     "config": {
-        "process-timeout": 1800
+        "process-timeout": 1800,
+        "fxp-asset.installer-paths":  {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
+        }
     },
     "scripts": {
         "post-create-project-cmd": [
@@ -54,10 +58,6 @@
             "generateCookieValidationKey": [
                 "config/web.php"
             ]
-        },
-        "asset-installer-paths": {
-            "npm-asset-library": "vendor/npm",
-            "bower-asset-library": "vendor/bower"
         }
     }
 }

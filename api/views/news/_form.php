@@ -28,6 +28,23 @@ use yii\widgets\ActiveForm;
 
     <div class="row">
         <div class="col-md-12">
+            <?= $form->field($model, 'companies')->widget(\kartik\select2\Select2::className(), [
+                'data' => \yii\helpers\ArrayHelper::map(
+                    \app\models\Company::find()->asArray()->all(),
+                    'id',
+                    'name'
+                ),
+                'language' => 'ru',
+                'options' => ['multiple' => true, 'placeholder' => 'Компании'],
+                'pluginOptions' => [
+                    'allowClear' => true
+                ],
+            ]); ?>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
             <?= $form->field($model, 'date')->textInput(['maxlength' => 255]) ?>
         </div>
     </div>
