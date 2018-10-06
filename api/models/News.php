@@ -84,7 +84,8 @@ class News extends \yii\db\ActiveRecord
             [
                 'news_id'=>$this->id
             ])->execute();
-
+        if (count($values) < 1)
+            return;
         foreach ($values as $value)
         {
             \Yii::$app->db->createCommand()->insert('{{%news_companies}}', [
