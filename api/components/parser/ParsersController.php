@@ -61,7 +61,9 @@ class ParsersController extends Controller
 
     public function actionAll()
     {
+        // Todo: Cron
         $actions = ['rbc', 'interfax', 'finam'];
+        \Yii::$app->db->charset = 'utf8mb4'; // Todo: Внести в Dockerfile
         \Yii::beginProfile('total', self::LOG_CATEGORY.'.profile');
         foreach ($actions as $action)
         {
