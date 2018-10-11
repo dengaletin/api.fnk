@@ -13,6 +13,8 @@ use yii\db\Expression;
 class ParsersController extends Controller
 {
 
+    const LOG_CATEGORY = 'NewsParser';
+
     protected function info($message)
     {
         \Yii::info($message, self::className());
@@ -30,14 +32,14 @@ class ParsersController extends Controller
                 'class' => 'yii\log\FileTarget',
                 'levels' => ['error'],
                 'logFile' => '@app/runtime/logs/parser-errors.log',
-                'categories' => [self::className()]
+                'categories' => [self::LOG_CATEGORY.'.*']
             ];
         \Yii::$app->getLog()->targets[] =
             [
                 'class' => 'yii\log\FileTarget',
                 'levels' => ['info'],
                 'logFile' => '@app/runtime/logs/parser.log',
-                'categories' => [self::className()]
+                'categories' => [self::LOG_CATEGORY.'.*']
             ];
         return parent::beforeAction($action);
     }
@@ -55,5 +57,18 @@ class ParsersController extends Controller
     public function actionFinam()
     {
         (new FinamParser())->run();
+    }
+
+    public function actionAll()
+    {
+        $actions = ['rbc', 'interfax', 'finam'];
+        \Yii::beginProfile('total', self::LOG_CATEGORY.'.profile');
+        foreach ($actions as $action)
+        {
+            \Yii::beginProfile($action, self::LOG_CATEGORY.'.profile');
+            $this->runAction($action);
+            \Yii::endProfile($action, self::LOG_CATEGORY.'.profile');
+        }
+        \Yii::endProfile('total', self::LOG_CATEGORY.'.profile');
     }
 }

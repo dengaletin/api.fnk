@@ -10,6 +10,7 @@ use app\models\ParserJobs;
 use Symfony\Component\DomCrawler\Crawler;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Console;
+use yii\helpers\FileHelper;
 
 abstract class AbstractParser
 {
@@ -82,15 +83,18 @@ abstract class AbstractParser
                     }
                 };
 
-
-                if (!count($meta['companies'])) {
-                    Console::stdout(' [-] Не подходит!' . PHP_EOL);
-                    return;
-                }
                 if ($this->isAlreadyParsed($meta['link'])) {
                     Console::stdout(' [-] Уже собирали!' . PHP_EOL);
                     return;
                 }
+                if (!count($meta['companies'])) {
+                    Console::stdout(' [+] Добавляем без компании' . PHP_EOL);
+                    //return;
+                } else {
+                    Console::stdout(' [+] Совпало '.count($meta['companies']).' компаний' . PHP_EOL);
+                    //return;
+                }
+
 
                 Console::stdout('[+]' . $meta['link'] . PHP_EOL);
 
@@ -108,6 +112,7 @@ abstract class AbstractParser
                     'date' => (new \DateTime())->format('Y-m-d H:i:s'),
                 ]);
                 if ($model->save()) {
+                    if ($meta['companies'])
                     foreach ($meta['companies'] as $company) {
                         \Yii::$app->db->createCommand()->insert('{{%news_companies}}', [
                             'news_id' => $model->id,
@@ -141,6 +146,7 @@ abstract class AbstractParser
         $m->news_id = $news_id;
         $m->file = md5($url) . '.' . pathinfo($url, PATHINFO_EXTENSION);
 
+        FileHelper::createDirectory(dirname($m->resolvePath($m->filePath)));
         file_put_contents(
             $m->resolvePath($m->filePath),
             file_get_contents($url)
