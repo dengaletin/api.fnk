@@ -32,14 +32,14 @@ class ParsersController extends Controller
                 'class' => 'yii\log\FileTarget',
                 'levels' => ['error'],
                 'logFile' => '@app/runtime/logs/parser-errors.log',
-                'categories' => [self::LOG_CATEGORY.'.*']
+                'categories' => [self::LOG_CATEGORY . '.*']
             ];
         \Yii::$app->getLog()->targets[] =
             [
                 'class' => 'yii\log\FileTarget',
                 'levels' => ['info'],
                 'logFile' => '@app/runtime/logs/parser.log',
-                'categories' => [self::LOG_CATEGORY.'.*']
+                'categories' => [self::LOG_CATEGORY . '.*']
             ];
         return parent::beforeAction($action);
     }
@@ -64,13 +64,8 @@ class ParsersController extends Controller
         // Todo: Cron
         $actions = ['rbc', 'interfax', 'finam'];
         \Yii::$app->db->charset = 'utf8mb4'; // Todo: Внести в Dockerfile
-        \Yii::beginProfile('total', self::LOG_CATEGORY.'.profile');
-        foreach ($actions as $action)
-        {
-            \Yii::beginProfile($action, self::LOG_CATEGORY.'.profile');
+        foreach ($actions as $action) {
             $this->runAction($action);
-            \Yii::endProfile($action, self::LOG_CATEGORY.'.profile');
         }
-        \Yii::endProfile('total', self::LOG_CATEGORY.'.profile');
     }
 }
