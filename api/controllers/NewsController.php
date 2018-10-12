@@ -65,31 +65,9 @@ class NewsController extends Controller
     public function actionView($id)
     {
         $model = $this->findModel($id);
-        $photo = new NewsPhoto();
 
-        $photo_form = new NewsPhotoForm();
-        
-        if (Yii::$app->request->isPost) {
-            
-            $photo_form->imageFiles = UploadedFile::getInstances($photo_form, 'imageFiles');
-            
-            if($photo_form->upload($model->id)) {
-                return $this->redirect(['', 'id' => $model->id]);
-            }
-        }
-        
-        if ($photo->load(Yii::$app->request->post())) {
-            
-            $photo->news_id = $model->id;
-
-            if ($photo->save()) {
-                return $this->redirect(['', 'id' => $model->id]);
-            }
-        }
-        
         return $this->render('view', [
             'model' => $model,
-            'photo' => $photo_form,
         ]);
     }
 
@@ -117,18 +95,30 @@ class NewsController extends Controller
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
+     * @throws NotFoundHttpException
      */
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
-        } else {
-            return $this->render('update', [
-                'model' => $model,
-            ]);
+        $photo_form = new NewsPhotoForm();
+
+        if (Yii::$app->request->isPost) {
+            if ($model->load(Yii::$app->request->post())) {
+                $model->save();
+            }
+
+            $photo_form->imageFiles = UploadedFile::getInstances($photo_form, 'imageFiles');
+
+            if ((bool)$photo_form->imageFiles && $photo_form->imageFiles) {
+                $photo_form->upload($model->id);
+            }
         }
+
+        return $this->render('update', [
+            'model' => $model,
+            'photo' => $photo_form
+        ]);
     }
 
     /**

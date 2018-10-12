@@ -27,7 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
     </p>
 
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-9">
             <?= DetailView::widget([
                 'model' => $model,
                 'attributes' => [
@@ -42,7 +42,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 ],
             ]) ?>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-3">
             <div class="panel panel-default">
                 <div class="panel-heading">Фотографии</div>
                 <div class="panel-body" style="padding-bottom: 2px">
@@ -59,17 +59,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                 'value' => function (NewsPhoto $data) { return Html::a(Html::img($data->getThumbFileUrl('file', 'thumb')), $data->getImageFileUrl('file')); },
                                 'format' => 'raw',
                             ],
-                            [
-                                'class' => 'yii\grid\ActionColumn',
-                                'template' => '{update} {delete}',
-                                'controller' => 'news-photos',
-                            ],
                         ],
                     ]); ?>
-
-                    <?= $this->render('_photo_form', [
-                        'model' => $photo,
-                    ]) ?>
                 </div>
             </div>
         </div>
