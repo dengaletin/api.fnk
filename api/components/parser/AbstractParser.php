@@ -11,6 +11,7 @@ use Symfony\Component\DomCrawler\Crawler;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Console;
 use yii\helpers\FileHelper;
+use yii\web\ServerErrorHttpException;
 
 abstract class AbstractParser
 {
@@ -106,13 +107,18 @@ abstract class AbstractParser
                         ->eq(0)
                         ->text()));
 
-                $model = new News([
-                    'title' => $meta['title'],
-                    'text' => $meta['text'],
-                    'publish' => (int)((isset($meta['companies']) && count($meta['companies']) > 0)),
-                    'date' => (new \DateTime())->format('Y-m-d H:i:s'),
-                ]);
-                if ($model->save()) {
+                $transaction = \Yii::$app->db->beginTransaction();
+
+                try {
+                    $model = new News([
+                        'title' => $meta['title'],
+                        'text' => $meta['text'],
+                        'publish' => (int)((isset($meta['companies']) && count($meta['companies']) > 0)),
+                        'date' => (new \DateTime())->format('Y-m-d H:i:s'),
+                    ]);
+                    if (!$model->save()) {
+                        throw new ServerErrorHttpException('Can\'t save model', 1);
+                    }
                     if (isset($meta['companies'])) {
                         foreach ($meta['companies'] as $company) {
                             \Yii::$app->db->createCommand()->insert('{{%news_companies}}', [
@@ -121,18 +127,24 @@ abstract class AbstractParser
                             ])->execute();
                         }
                     }
-
                     if ($image_url = ArrayHelper::getValue($meta, 'image_url')) {
                         $this->attachImage($image_url, $model->id);
                     }
                     $model = new ParserJobs([
                         'source_url' => $meta['link'],
                         'article_id' => $model->id,
-                        //'company_id' => $meta['company']['id'],
                         'post_time' => $meta['pubDate'],
                     ]);
-                    $model->save();
+
+                    if (!$model->save()) {
+                        throw new ServerErrorHttpException('Can\'t save model', 1);
+                    }
+                } catch (\Throwable $exception) {
+                    $transaction->rollBack();
+                    throw $exception;
                 }
+
+                $transaction->commit();
             });
     }
 
