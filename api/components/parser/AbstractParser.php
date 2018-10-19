@@ -112,7 +112,7 @@ abstract class AbstractParser
                     'date' => (new \DateTime())->format('Y-m-d H:i:s'),
                 ]);
                 if ($model->save()) {
-                    if ($meta['companies'])
+                    if (isset($meta['companies']))
                     foreach ($meta['companies'] as $company) {
                         \Yii::$app->db->createCommand()->insert('{{%news_companies}}', [
                             'news_id' => $model->id,
