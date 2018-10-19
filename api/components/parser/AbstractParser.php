@@ -87,7 +87,7 @@ abstract class AbstractParser
                     Console::stdout(' [-] Уже собирали!' . PHP_EOL);
                     return;
                 }
-                if (!count($meta['companies'])) {
+                if (!isset($meta['companies']) || !count($meta['companies'])) {
                     Console::stdout(' [+] Добавляем без компании' . PHP_EOL);
                     //return;
                 } else {
