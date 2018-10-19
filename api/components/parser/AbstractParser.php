@@ -91,7 +91,7 @@ abstract class AbstractParser
                     Console::stdout(' [+] Добавляем без компании' . PHP_EOL);
                     //return;
                 } else {
-                    Console::stdout(' [+] Совпало '.count($meta['companies']).' компаний' . PHP_EOL);
+                    Console::stdout(' [+] Совпало ' . count($meta['companies']) . ' компаний' . PHP_EOL);
                     //return;
                 }
 
@@ -109,15 +109,17 @@ abstract class AbstractParser
                 $model = new News([
                     'title' => $meta['title'],
                     'text' => $meta['text'],
+                    'publish' => (int)((isset($meta['companies']) && count($meta['companies']) > 0)),
                     'date' => (new \DateTime())->format('Y-m-d H:i:s'),
                 ]);
                 if ($model->save()) {
-                    if (isset($meta['companies']))
-                    foreach ($meta['companies'] as $company) {
-                        \Yii::$app->db->createCommand()->insert('{{%news_companies}}', [
-                            'news_id' => $model->id,
-                            'company_id' => $company['id'],
-                        ])->execute();
+                    if (isset($meta['companies'])) {
+                        foreach ($meta['companies'] as $company) {
+                            \Yii::$app->db->createCommand()->insert('{{%news_companies}}', [
+                                'news_id' => $model->id,
+                                'company_id' => $company['id'],
+                            ])->execute();
+                        }
                     }
 
                     if ($image_url = ArrayHelper::getValue($meta, 'image_url')) {
