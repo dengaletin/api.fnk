@@ -9,6 +9,7 @@ use app\models\ParserJobs;
 use Symfony\Component\DomCrawler\Crawler;
 use yii\console\Controller;
 use yii\db\Expression;
+use yii\helpers\Console;
 
 class ParsersController extends Controller
 {
@@ -67,5 +68,12 @@ class ParsersController extends Controller
         foreach ($actions as $action) {
             $this->runAction($action);
         }
+    }
+
+    public function actionCleanNews()
+    {
+        $target_date = date('Y-m-d', time() - 3 * 24 * 60 * 60);
+        $num = News::deleteAll(['<', 'date', $target_date]);
+        Console::output(sprintf('Удалено %s записей[target_date: %s]', $num, $target_date) . PHP_EOL);
     }
 }
