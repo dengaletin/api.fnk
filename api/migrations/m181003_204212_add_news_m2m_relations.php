@@ -11,6 +11,7 @@ class m181003_204212_add_news_m2m_relations extends Migration
         }
 
         $this->createTable('{{%news_companies}}', [
+            'id' => $this->primaryKey(),
             'news_id' => $this->integer(),
             'company_id' => $this->integer()
         ], $tableOptions);
