@@ -64,7 +64,7 @@ class ParsersController extends Controller
     {
         // Todo: Cron
         $actions = ['rbc', 'interfax', 'finam'];
-        \Yii::$app->db->charset = 'utf8mb4'; // Todo: Внести в Dockerfile
+        //\Yii::$app->db->charset = 'utf8mb4'; // Todo: Внести в Dockerfile
         foreach ($actions as $action) {
             $this->runAction($action);
         }
@@ -73,7 +73,12 @@ class ParsersController extends Controller
     public function actionCleanNews()
     {
         $target_date = date('Y-m-d', time() - 3 * 24 * 60 * 60);
-        $num = News::deleteAll(['<', 'date', $target_date]);
+
+//        $command = \Yii::$app->db->createCommand();
+//        $command->delete(News::tableName(), ['AND', ['<', 'date', $target_date], ['publish' => '0']]);
+//        var_dump($command->getRawSql());
+
+        $num = News::deleteAll(['AND', ['<', 'date', $target_date], ['publish' => '0']]);
         Console::output(sprintf('Удалено %s записей[target_date: %s]', $num, $target_date) . PHP_EOL);
     }
 }
