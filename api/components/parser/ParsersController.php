@@ -14,37 +14,6 @@ use yii\helpers\Console;
 class ParsersController extends Controller
 {
 
-    const LOG_CATEGORY = 'NewsParser';
-
-    protected function info($message)
-    {
-        \Yii::info($message, self::className());
-    }
-
-    protected function error($message)
-    {
-        \Yii::error($message, self::className());
-    }
-
-    public function beforeAction($action)
-    {
-        \Yii::$app->getLog()->targets[] =
-            [
-                'class' => 'yii\log\FileTarget',
-                'levels' => ['error'],
-                'logFile' => '@app/runtime/logs/parser-errors.log',
-                'categories' => [self::LOG_CATEGORY . '.*']
-            ];
-        \Yii::$app->getLog()->targets[] =
-            [
-                'class' => 'yii\log\FileTarget',
-                'levels' => ['info'],
-                'logFile' => '@app/runtime/logs/parser.log',
-                'categories' => [self::LOG_CATEGORY . '.*']
-            ];
-        return parent::beforeAction($action);
-    }
-
     public function actionRbc()
     {
         (new RbcParser())->run();
