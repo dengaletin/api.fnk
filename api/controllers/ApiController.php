@@ -173,7 +173,11 @@ class ApiController extends Controller
 
     public function actionNews($last = null)
     {
-        $query = News::find()->with(['photos'])->where([ 'publish' => 1 ])->orderBy(['id' => SORT_DESC]);
+        $query = News::find()->with(['photos'])
+            ->joinWith(['companies companies'])
+            ->where([ 'publish' => 1 ])
+            ->andFilterWhere([ 'companies.id' => Yii::$app->request->get('company') ])
+            ->orderBy(['id' => SORT_DESC]);
         if(null !== $last) {
             $query->limit((int)$last);
         }
@@ -192,6 +196,7 @@ class ApiController extends Controller
                 'title' => $row->title,
                 'text' => $row->text,
                 'date' => $row->date,
+                'companies' => $row->companies,
                 'photos' => $photos,
                 'thumbs' => $thumbs,
             ];
