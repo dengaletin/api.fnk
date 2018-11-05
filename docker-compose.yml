@@ -35,9 +35,3 @@ services:
       - ./api:/app
     environment: 
       VIRTUAL_HOST: api.localhost
-  cron:
-    image: mcuadros/ofelia:latest
-    volumes:
-      - ./docker/ofelia:/etc/ofelia
-    networks: 
-      - backend
