@@ -68,6 +68,11 @@ abstract class AbstractParser
 
     abstract function fetch($url);
 
+    protected function prepareText($text)
+    {
+        return $text;
+    }
+
     public function run()
     {
         $this->fetch(static::URL)
@@ -78,7 +83,7 @@ abstract class AbstractParser
                 Console::stdout('Статья: ' . $meta['title'] . '... ' . PHP_EOL);
                 foreach ($companies as $company) {
 
-                    if (preg_match($company['preg_condition'], $node->text())) {
+                    if (preg_match($company['preg_condition'], $this->prepareText($node->text()))) {
                         $meta['companies'][] = $company;
                         Console::stdout(' [!] Найдена компания #' . $company['id'] . PHP_EOL);
                     }

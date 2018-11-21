@@ -19,4 +19,12 @@ class InterfaxParser extends AbstractParser
     {
         return new Crawler(file_get_contents($url));
     }
+
+    protected function prepareText($text)
+    {
+        $text = preg_replace('/^.*INTERFAX.RU\s-/i', '', $text);
+        $text = trim($text);
+        return parent::prepareText($text);
+    }
+
 }
