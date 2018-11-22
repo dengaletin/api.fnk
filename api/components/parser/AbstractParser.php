@@ -36,9 +36,9 @@ abstract class AbstractParser
             unset($item['id']);
             return [
                 'id' => $id,
-                'preg_condition' => '/\b(' . implode('|', array_map(function ($str) {
+                'preg_condition' => '/[\W]+(' . implode('|', array_map(function ($str) {
                         return preg_quote(mb_strtolower(trim($str)), '/');
-                    }, array_filter(array_values($item)))) . ')\b/i'
+                    }, array_filter(array_values($item)))) . ')[\W]+/i'
             ];
         }, $companies);
 
