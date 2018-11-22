@@ -197,6 +197,7 @@ class ApiController extends Controller
                 'text' => $row->text,
                 'date' => $row->date,
                 'companies' => $row->companies,
+                'source' => $row->source->source_host,
                 'photos' => $photos,
                 'thumbs' => $thumbs,
             ];
