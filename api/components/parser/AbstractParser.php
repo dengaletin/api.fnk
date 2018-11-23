@@ -83,7 +83,7 @@ abstract class AbstractParser
                 Console::stdout('Статья: ' . $meta['title'] . '... ' . PHP_EOL);
                 foreach ($companies as $company) {
 
-                    if (preg_match($company['preg_condition'], $this->prepareText($node->text()))) {
+                    if (preg_match($company['preg_condition'], $node->text())) {
                         $meta['companies'][] = $company;
                         Console::stdout(' [!] Найдена компания #' . $company['id'] . PHP_EOL);
                     }
@@ -117,7 +117,7 @@ abstract class AbstractParser
                 try {
                     $model = new News([
                         'title' => $meta['title'],
-                        'text' => $meta['text'],
+                        'text' => $this->prepareText($meta['text']),
                         'publish' => (int)((isset($meta['companies']) && count($meta['companies']) > 0)),
                         'date' => (new \DateTime())->format('Y-m-d H:i:s'),
                     ]);
