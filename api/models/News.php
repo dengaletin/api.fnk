@@ -53,6 +53,37 @@ class News extends \yii\db\ActiveRecord
         ];
     }
 
+    public function fields()
+    {
+        $fields = parent::fields();
+
+        unset($fields['id']);
+        unset($fields['publish']);
+
+        return array_merge($fields, [
+            'companies' => function (self $model) {
+                return $model->companies;
+            },
+            'source' => function (self $model) {
+                return $model->source->source_host;
+            },
+            'photos' => function (self $model) {
+                $result = [];
+                foreach ($model->photos as $photo) {
+                    $result[] = $photo->getImageFileUrl('file');
+                }
+                return $result;
+            },
+            'thumbs' => function (self $model) {
+                $result = [];
+                foreach ($model->photos as $photo) {
+                    $result[] = $photo->getThumbFileUrl('file');
+                }
+                return $result;
+            }
+        ]);
+    }
+
     /**
      * @return \yii\db\ActiveQuery
      */

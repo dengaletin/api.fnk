@@ -20,10 +20,13 @@ use app\models\Version;
 use app\models\Currency;
 use app\models\RegistrationRequest;
 use Exception;
+use yii\data\ActiveDataProvider;
+use yii\data\Pagination;
 use yii\filters\AccessControl;
 use yii\filters\ContentNegotiator;
 use yii\filters\VerbFilter;
 use yii\helpers\ArrayHelper;
+use yii\rest\Serializer;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -171,39 +174,24 @@ class ApiController extends Controller
         return (int)Version::find()->max('id');
     }
 
-    public function actionNews($last = null, $company_id = null)
+    public function actionNews($company_id = null)
     {
         $query = News::find()->with(['photos'])
             ->joinWith(['companies companies'])
-            ->where([ 'publish' => 1 ])
-            ->andFilterWhere([ 'companies.id' => $company_id ])
+            ->where(['publish' => 1])
+            ->andFilterWhere(['companies.id' => $company_id])
             ->orderBy(['id' => SORT_DESC]);
-        if(null !== $last) {
-            $query->limit((int)$last);
-        }
 
-        $result = [ ];
-        foreach($query->all() as $row) {
-            $photos = [];
-            $thumbs = [];
+        $provider = new ActiveDataProvider([
+            'query' => $query,
+            'pagination' => [
+                'class' => Pagination::className(),
+                'pageParam' => 'page',
+                'pageSize' => 20
+            ],
+        ]);
 
-            foreach($row->getPhotos()->all() as $photo) {
-                $photos[] = $photo->getImageFileUrl('file');
-                $thumbs[] = $photo->getThumbFileUrl('file');
-            }
-
-            $result[] = [
-                'title' => $row->title,
-                'text' => $row->text,
-                'date' => $row->date,
-                'companies' => $row->companies,
-                'source' => $row->source->source_host,
-                'photos' => $photos,
-                'thumbs' => $thumbs,
-            ];
-        }
-
-        return $result;
+        return (new Serializer())->serialize($provider);
     }
 
     public function actionCompanies()

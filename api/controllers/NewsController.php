@@ -48,6 +48,8 @@ class NewsController extends Controller
      */
     public function actionIndex()
     {
+        echo `whoami`;
+        die();
         $searchModel = new NewsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
