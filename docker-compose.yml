@@ -4,6 +4,8 @@ networks:
     external: true
   backend:
     internal: true
+volumes:
+  mysql_data:
 services:
   db:
     image: mysql:5
@@ -13,7 +15,7 @@ services:
       MYSQL_ROOT_PASSWORD: qwerty
       MYSQL_DATABASE: api
     volumes:
-      - ./docker/mysql/data:/var/lib/mysql
+      - mysql_data:/var/lib/mysql
   pma:
     image: phpmyadmin/phpmyadmin:latest
     networks:
