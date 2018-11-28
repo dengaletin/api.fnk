@@ -59,20 +59,20 @@ class ApiController extends Controller
                     'application/json' => Response::FORMAT_JSON,
                 ],
             ],
-//            'authenticator' => [
-//                'class' => DeviceAuth::className(),
-//                'except' => [ 'auth', 'subscribe' ],
-//            ],
-//            'access' => [
-//                'class' => AccessControl::className(),
-//                'only' => [/*'subscribe',*/ 'unsubscribe', 'remove-device', 'purchase', 'profile', 'setup-profile', 'setup-phone', 'setup-phone-confirm'],
-//                'rules' => [
-//                    [
-//                        'allow' => true,
-//                        'roles' => ['@'],
-//                    ],
-//                ],
-//            ],
+            'authenticator' => [
+                'class' => DeviceAuth::className(),
+                'except' => [ 'auth', 'subscribe' ],
+            ],
+            'access' => [
+                'class' => AccessControl::className(),
+                'only' => [/*'subscribe',*/ 'unsubscribe', 'remove-device', 'purchase', 'profile', 'setup-profile', 'setup-phone', 'setup-phone-confirm'],
+                'rules' => [
+                    [
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
+                ],
+            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
