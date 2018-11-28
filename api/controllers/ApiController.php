@@ -59,20 +59,20 @@ class ApiController extends Controller
                     'application/json' => Response::FORMAT_JSON,
                 ],
             ],
-            'authenticator' => [
-                'class' => DeviceAuth::className(),
-                'except' => [ 'auth', 'subscribe' ],
-            ],
-            'access' => [
-                'class' => AccessControl::className(),
-                'only' => [/*'subscribe',*/ 'unsubscribe', 'remove-device', 'purchase', 'profile', 'setup-profile', 'setup-phone', 'setup-phone-confirm'],
-                'rules' => [
-                    [
-                        'allow' => true,
-                        'roles' => ['@'],
-                    ],
-                ],
-            ],
+//            'authenticator' => [
+//                'class' => DeviceAuth::className(),
+//                'except' => [ 'auth', 'subscribe' ],
+//            ],
+//            'access' => [
+//                'class' => AccessControl::className(),
+//                'only' => [/*'subscribe',*/ 'unsubscribe', 'remove-device', 'purchase', 'profile', 'setup-profile', 'setup-phone', 'setup-phone-confirm'],
+//                'rules' => [
+//                    [
+//                        'allow' => true,
+//                        'roles' => ['@'],
+//                    ],
+//                ],
+//            ],
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
@@ -176,11 +176,14 @@ class ApiController extends Controller
 
     public function actionNews($company_id = null)
     {
-        $query = News::find()->with(['photos'])
+        $query = News::find()
+            ->alias('t')
             ->joinWith(['companies companies'])
-            ->where(['publish' => 1])
+            ->with(['photos', 'companies'])
+            ->where(['t.publish' => 1])
             ->andFilterWhere(['companies.id' => $company_id])
-            ->orderBy(['id' => SORT_DESC]);
+            ->groupBy('t.id')
+            ->orderBy(['t.date' => SORT_DESC]);
 
         $provider = new ActiveDataProvider([
             'query' => $query,
