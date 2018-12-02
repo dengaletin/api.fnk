@@ -1,5 +1,6 @@
 <?php
 
+use app\models\Company;
 use app\models\Group;
 use app\models\Mode;
 use yii\helpers\ArrayHelper;
@@ -80,6 +81,7 @@ use yii\widgets\ActiveForm;
             <?= $form->field($model, 'site')->textInput(['maxlength' => 255]) ?>
 
             <?= $form->field($model, 'parser_variations')->textInput(['maxlength' => 255]) ?>
+            <?= $form->field($model, 'parser_variations')->hint('Разделитель вариантов: '. Company::VARIATIONS_SEPARATOR) ?>
 
             <?= $form->field($model, 'free')->checkbox() ?>
         </div>
