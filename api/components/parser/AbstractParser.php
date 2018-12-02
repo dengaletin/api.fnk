@@ -11,6 +11,7 @@ use Symfony\Component\DomCrawler\Crawler;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Console;
 use yii\helpers\FileHelper;
+use yii\helpers\VarDumper;
 use yii\web\ServerErrorHttpException;
 
 abstract class AbstractParser
@@ -27,22 +28,26 @@ abstract class AbstractParser
 
     private function getCandidates()
     {
-        $cols = preg_filter('/^name.*/', '$0', array_keys((new Company())->attributes));
-        $cols[] = 'id';
-        $companies = Company::find()->select(implode(',', $cols))->asArray()->all();
+        //$cols = preg_filter('/^name.*/', '$0', array_keys((new Company())->attributes));
+        $companies = Company::find()->select(['id', 'parser_variations'])->asArray()->all();
 
         $companies = array_map(function ($item) {
             $id = $item['id'];
             unset($item['id']);
+
+            $variations = array_filter(explode(Company::VARIATIONS_SEPARATOR, $item['parser_variations']));
+            if (count($variations) > 1)
+                return false;
+
             return [
                 'id' => $id,
                 'preg_condition' => '/[\W]+(' . implode('|', array_map(function ($str) {
                         return preg_quote(mb_strtolower(trim($str)), '/');
-                    }, array_filter(array_values($item)))) . ')[\W]+/i'
+                    }, $variations)) . ')[\W]+/i'
             ];
         }, $companies);
 
-        return $companies;
+        return array_filter($companies);
     }
 
     private function isAlreadyParsed($link)

@@ -19,7 +19,7 @@ class CompanySearch extends Company
     {
         return [
             [['id', 'mode_id', 'group_id'], 'integer'],
-            [['name', 'name_full', 'ticker', 'description', 'site'], 'safe'],
+            [['name', 'name_full', 'ticker', 'description', 'site', 'parser_variations'], 'safe'],
         ];
     }
 

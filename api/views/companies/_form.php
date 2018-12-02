@@ -79,6 +79,8 @@ use yii\widgets\ActiveForm;
 
             <?= $form->field($model, 'site')->textInput(['maxlength' => 255]) ?>
 
+            <?= $form->field($model, 'parser_variations')->textInput(['maxlength' => 255]) ?>
+
             <?= $form->field($model, 'free')->checkbox() ?>
         </div>
         <div class="col-md-6">

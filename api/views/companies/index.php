@@ -50,6 +50,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value' => function (Company $data) { return Html::a(Html::encode($data->name), ['view', 'id' => $data->id]); },
                 'format' => 'raw',
             ],
+            'parser_variations',
             'ticker',
             'name_full',
             [

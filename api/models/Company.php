@@ -28,6 +28,7 @@ use yiidreamteam\upload\ImageUploadBehavior;
  * @property string $site
  * @property string $logo
  * @property integer $free
+ * @property string $parser_variations
  *
  * @property Group $group
  * @property Mode $mode
@@ -37,6 +38,8 @@ use yiidreamteam\upload\ImageUploadBehavior;
  */
 class Company extends ActiveRecord
 {
+    const VARIATIONS_SEPARATOR = '<|>';
+
     /**
      * @inheritdoc
      */
@@ -55,7 +58,7 @@ class Company extends ActiveRecord
             [['mode_id', 'group_id'], 'integer'],
             ['free', 'boolean'],
             ['free', 'default', 'value' => 0],
-            [['description', 'description_eng'], 'string'],
+            [['description', 'description_eng', 'parser_variations'], 'string'],
             [['name_full', 'name_full_eng', 'name', 'name_eng', 'name_for_list', 'name_for_list_eng', 'ticker', 'ticker_eng', 'site'], 'string', 'max' => 255],
             ['logo', 'image', 'extensions' => 'jpg, jpeg, gif, png'],
         ];
@@ -74,6 +77,7 @@ class Company extends ActiveRecord
             'group_id' => 'Группа',
             'logo' => 'Лого',
             'free' => 'Бесплатная',
+            'parser_variations' => 'Названия для парсинга'
         ]);
     }
 
