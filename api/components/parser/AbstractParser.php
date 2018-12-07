@@ -36,7 +36,7 @@ abstract class AbstractParser
             unset($item['id']);
 
             $variations = array_filter(explode(Company::VARIATIONS_SEPARATOR, $item['parser_variations']));
-            if (count($variations) > 1)
+            if (count($variations) < 1)
                 return false;
 
             return [
