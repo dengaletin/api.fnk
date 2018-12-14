@@ -1,0 +1,1461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title><![CDATA[РБК - Все материалы]]></title>
+        <link>https://www.rbc.ru/</link>
+        <description>rss.rbc.ru</description>
+        <pubDate>Fri, 14 Dec 2018 21:32:45 +0300</pubDate>
+        <image>
+            <url>http://pics.rbc.ru/img/fp_v4/skin/img/v6-logo.png</url>
+            <title><![CDATA[Главные новости]]></title>
+            <link>https://www.rbc.ru/</link>
+        </image>
+        <item>
+            <title><![CDATA[Экс-главе РАО предъявили обвинение в мошенничестве]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c13f23c9a794775c660bd62</link>
+            <guid>5c13f23c9a794775c660bd62</guid>
+            <pubDate>Fri, 14 Dec 2018 21:30:48 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Суд счел законным отказ в заведении дела об исчезновении 27 жителей Чечни]]></title>
+            <link>https://www.rbc.ru/society/14/12/2018/5c13eaa99a794774909948cc</link>
+            <description><![CDATA[Уголовное дело об исчезновении людей просили возбудить по материалам «Новой газеты», которая сообщила о предполагаемой массовой казни без суда и следствия. Власти Чечни называли информацию об этом ложью]]></description>
+            <author>Анна Трунина</author>
+            <guid>5c13eaa99a794774909948cc</guid>
+            <pubDate>Fri, 14 Dec 2018 21:24:33 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Игра на упреждение: зачем ЦБ повысил ключевую ставку второй раз за год]]></title>
+            <link>https://www.rbc.ru/finances/14/12/2018/5c13b7879a794760d9a10db3</link>
+            <description><![CDATA[Банк России второй раз в году повысил ключевую ставку, опасаясь разгона инфляции из-за повышения НДС и внешних факторов. Это не означает ужесточения денежно-кредитной политики, уверяет глава ЦБ. Но эксперты ждут нового повышения]]></description>
+            <author>Павел Казарновский, Екатерина Литова</author>
+            <guid>5c13b7879a794760d9a10db3</guid>
+            <pubDate>Fri, 14 Dec 2018 21:08:42 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/5/14/755448114487145.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[«Надо начинать бизнес в России»: Сергей Колесников в проекте «Герои РБК»]]></title>
+            <link>https://www.rbc.ru/own_business/14/12/2018/5c0fd8bf9a7947ab8d406a69</link>
+            <description><![CDATA[Как студент, подрабатывавший кровельщиком, вместе с партнером создал компанию с годовой выручкой 80 млрд руб. и попал в глобальный список Forbes? Президент корпорации «Технониколь» Сергей Колесников — в проекте «Герои РБК»]]></description>
+            <guid>5c0fd8bf9a7947ab8d406a69</guid>
+            <pubDate>Fri, 14 Dec 2018 21:00:06 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[У вице-губернатора Псковской области нашли вид на жительство в Эстонии]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c13ea399a794774296add1b</link>
+            <guid>5c13ea399a794774296add1b</guid>
+            <pubDate>Fri, 14 Dec 2018 20:52:24 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Американской PepsiCo разрешили продать завод в Ессентуках]]></title>
+            <link>https://www.rbc.ru/business/14/12/2018/5c13cc239a7947692715299d</link>
+            <description><![CDATA[Компания PepsiCo подтвердила намерение продать принадлежащий ей завод в Кавминводах по розливу минералки «Ессентуки». Покупатель — связанная с государственной «Кавминкурортресурсы» компания. Сделку одобрила ФАС]]></description>
+            <author>Елена Сухорукова</author>
+            <guid>5c13cc239a7947692715299d</guid>
+            <pubDate>Fri, 14 Dec 2018 20:34:54 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/7/89/755448096669897.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Меркель объяснила решение Евросоюза по санкциям против России]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c13e3749a794771beb5beab</link>
+            <guid>5c13e3749a794771beb5beab</guid>
+            <pubDate>Fri, 14 Dec 2018 20:25:36 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[ЦБ оценил влияние маневра в нефтяной отрасли на стоимость бензина]]></title>
+            <link>https://www.rbc.ru/economics/14/12/2018/5c13dd749a7947704eed8a39</link>
+            <description><![CDATA[ЦБ привел подробные оценки роста цен в связи с реализацией налогового маневра в нефтегазовой отрасли. При нефти по $90 цена на бензин вырастет на 11%, а при барреле дешевле $60 она упадет]]></description>
+            <author>Антон Фейнберг</author>
+            <guid>5c13dd749a7947704eed8a39</guid>
+            <pubDate>Fri, 14 Dec 2018 20:19:42 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/1/40/755448084278401.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Хозяин бренда Louis Vuitton купит владельца отеля в Петербурге]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c13d5a99a79476e3de125b8</link>
+            <guid>5c13d5a99a79476e3de125b8</guid>
+            <pubDate>Fri, 14 Dec 2018 20:03:22 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Генпрокуратура отчиталась о выполнении просьбы Путина по правозащитнику]]></title>
+            <link>https://www.rbc.ru/politics/14/12/2018/5c13d5c59a79476e3605a0dd</link>
+            <description><![CDATA[Надзорное ведомство не увидело нарушений в аресте 77-летнего правозащитника Льва Пономарева на 16 суток из-за поста в Facebook. Перепроверить такое решение суда ранее поручил Владимир Путин после встречи с членами СПЧ]]></description>
+            <author>Анна Трунина</author>
+            <guid>5c13d5c59a79476e3605a0dd</guid>
+            <pubDate>Fri, 14 Dec 2018 20:02:40 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/4/92/755448071711924.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Силуанов отказал Минску в компенсации в $310 млн за налоговый маневр]]></title>
+            <link>https://www.rbc.ru/economics/14/12/2018/5c13dbf99a79476ff10a6303</link>
+            <description><![CDATA[Изменения налогового законодательства в России, в том числе в нефтегазовой отрасли, — это внутреннее дело, подчеркнул первый вице-премьер]]></description>
+            <author>Маргарита Девяткина</author>
+            <guid>5c13dbf99a79476ff10a6303</guid>
+            <pubDate>Fri, 14 Dec 2018 19:39:22 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/2/77/755448057767772.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[ДНР заявила о приведении в боевую готовность всех воинских частей]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c13d7ca9a79476f3e6ebdd6</link>
+            <guid>5c13d7ca9a79476f3e6ebdd6</guid>
+            <pubDate>Fri, 14 Dec 2018 19:34:19 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Росстат объяснил перерасчет стоимости оливье]]></title>
+            <link>https://www.rbc.ru/society/14/12/2018/5c13c33c9a794765aef9c38d</link>
+            <description><![CDATA[Статистическое ведомство разъяснило расхождение в подсчете стоимости любимого новогоднего блюда: в 2017 году оно непонятным образом подешевело, что вызвало вопросы. Все дело в огурцах, пояснили в Росстате]]></description>
+            <author>Анна Трунина</author>
+            <guid>5c13c33c9a794765aef9c38d</guid>
+            <pubDate>Fri, 14 Dec 2018 19:12:31 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/8/07/755448070226078.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Суд заочно арестовал бывшего менеджера группы «Сумма» Клопнева]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c13d3ca9a79476daf731d68</link>
+            <guid>5c13d3ca9a79476daf731d68</guid>
+            <pubDate>Fri, 14 Dec 2018 19:11:35 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Число погибших в результате стрельбы в Страсбурге возросло до четырех]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c13ccd29a79476996509ab1</link>
+            <guid>5c13ccd29a79476996509ab1</guid>
+            <pubDate>Fri, 14 Dec 2018 18:47:19 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Facebook сообщил о давшей доступ к фото пользователей ошибке]]></title>
+            <link>https://www.rbc.ru/technology_and_media/14/12/2018/5c13c5679a794766e19108ed</link>
+            <description><![CDATA[Ошибка в протоколах Facebook могла привести к утечке фотографий пользователей в сторонние приложения, сообщила социальная сеть. Ошибка могла затронуть почти 7 млн человек и 1,5 тыс. приложений, в которые можно зайти через Facebook]]></description>
+            <author>Наталья Демченко</author>
+            <guid>5c13c5679a794766e19108ed</guid>
+            <pubDate>Fri, 14 Dec 2018 18:41:42 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/2/56/755448027574562.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[В Минздраве решили исследовать детей для оценки рисков цифровизации]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c13c7389a7947673162ed1f</link>
+            <guid>5c13c7389a7947673162ed1f</guid>
+            <pubDate>Fri, 14 Dec 2018 18:36:56 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[МИД России cчел создание армии Косово угрозой вооруженного конфликта]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c13c6189a794766cf7e07bf</link>
+            <guid>5c13c6189a794766cf7e07bf</guid>
+            <pubDate>Fri, 14 Dec 2018 18:19:05 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Аудитория заблокированного Telegram приблизилась к рекордным показателям]]></title>
+            <link>https://www.rbc.ru/technology_and_media/14/12/2018/5c13a59c9a7947585724bcd6</link>
+            <description><![CDATA[Несмотря на блокировку, российская аудитория мобильного приложения Telegram после сезонного летнего спада вновь растет. Она уже приблизилась к рекордным апрельским показателям, когда к мессенджеру было приковано всеобщее внимание]]></description>
+            <author>Сергей Соболев, Мария Истомина</author>
+            <guid>5c13a59c9a7947585724bcd6</guid>
+            <pubDate>Fri, 14 Dec 2018 18:13:57 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/8/76/755448008167768.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[ВТБ заявил о планах поднять ставки по ипотеке из-за решения ЦБ]]></title>
+            <link>https://www.rbc.ru/finances/14/12/2018/5c13c3cf9a794765630c7f24</link>
+            <description><![CDATA[Повышение ключевой ставки ЦБ вынуждает банки пересматривать условия по своим продуктам, считают в ВТБ. Банк в первую очередь планирует увеличить ставки по ипотеке. Остальные банки пока не спешат давать конкретных прогнозов]]></description>
+            <author>Екатерина Литова</author>
+            <guid>5c13c3cf9a794765630c7f24</guid>
+            <pubDate>Fri, 14 Dec 2018 18:04:41 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/3/11/755448005917113.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Экс-глава «Магнита» вошел в совет директоров «Азбуки вкуса»]]></title>
+            <link>https://www.rbc.ru/business/14/12/2018/5c1224b69a79475c10739940</link>
+            <description><![CDATA[Экс-глава сети «Магнит» Хачатур Помбухчан, покинувший компанию летом, вернулся в розничный бизнес. Он вошел в совет директоров сети «Азбука вкуса» и будет участвовать в работе комитетов по стратегии и по аудиту]]></description>
+            <author>Ольга Дубравицкая</author>
+            <guid>5c1224b69a79475c10739940</guid>
+            <pubDate>Fri, 14 Dec 2018 17:53:08 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/4/74/755447993548744.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Суд арестовал вице-премьера Чувашии]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c13c2889a794764c4f76618</link>
+            <guid>5c13c2889a794764c4f76618</guid>
+            <pubDate>Fri, 14 Dec 2018 17:51:47 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Начальника Свердловской железной дороги арестовали на два месяца]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c13c04b9a794763fe3b56b5</link>
+            <guid>5c13c04b9a794763fe3b56b5</guid>
+            <pubDate>Fri, 14 Dec 2018 17:49:02 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Испанская прокуратура подаст иск против певицы Шакиры]]></title>
+            <link>https://www.rbc.ru/business/14/12/2018/5c13b7269a7947603def1fa9</link>
+            <description><![CDATA[Шакиру подозревают в налоговом мошенничестве. По данным правоохранительных органов Испании, она с 2012 по 2014 год уклонилась от уплаты свыше €14 млн]]></description>
+            <author>Наталья Демченко</author>
+            <guid>5c13b7269a7947603def1fa9</guid>
+            <pubDate>Fri, 14 Dec 2018 17:46:46 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/7/62/755447990375627.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[В СБУ сообщили о краже баз данных воинских подразделений]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c13baae9a794761e817bb8a</link>
+            <guid>5c13baae9a794761e817bb8a</guid>
+            <pubDate>Fri, 14 Dec 2018 17:44:55 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Сбербанк оценил расходы россиян на поездки по России]]></title>
+            <link>https://www.rbc.ru/finances/14/12/2018/5c13b8e29a7947616e47be6c</link>
+            <description><![CDATA[В январе—октябре 2018 года россияне потратили в туристических и деловых поездках по стране 756,4 млрд руб. Темпы роста рынка внутреннего туризма оказались выше прошлогодних в связи с проведением чемпионата мира по футболу]]></description>
+            <author>Анна Трунина</author>
+            <guid>5c13b8e29a7947616e47be6c</guid>
+            <pubDate>Fri, 14 Dec 2018 17:43:02 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/7/60/755447991551607.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Глава Росрыболовства поделился с Путиным идеей создания рыбной биржи]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c13bba79a7947621b71219f</link>
+            <guid>5c13bba79a7947621b71219f</guid>
+            <pubDate>Fri, 14 Dec 2018 17:30:06 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Российские Ту-160 покинули Венесуэлу]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c13b4729a79475f2c461661</link>
+            <guid>5c13b4729a79475f2c461661</guid>
+            <pubDate>Fri, 14 Dec 2018 17:05:07 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Глава Центробанка оценила влияние ослабленного рубля на инфляцию]]></title>
+            <link>https://www.rbc.ru/finances/14/12/2018/5c13ae3c9a79475bfb3621ce</link>
+            <description><![CDATA[Банк России подсчитал, какой вклад в рост инфляции внесло ослабление курса рубля в 2018 году. Ранее сегодня ЦБ сообщил об «упреждающем» повышении ключевой ставки, этот шаг должен помочь снизить инфляционные риски]]></description>
+            <author>Антон Фейнберг, Наталья Демченко</author>
+            <guid>5c13ae3c9a79475bfb3621ce</guid>
+            <pubDate>Fri, 14 Dec 2018 17:00:28 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/1/43/755447962819431.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[ФСБ задержала вице-губернатора Псковской области]]></title>
+            <link>https://www.rbc.ru/society/14/12/2018/5c13b22c9a79475ee746b5f1</link>
+            <description><![CDATA[Губернатор Псковской области заявил, что власти работают в тесном взаимодействии с правоохранительными органами по данной ситуации]]></description>
+            <author>Дмитрий Серков, Елизавета Антонова</author>
+            <guid>5c13b22c9a79475ee746b5f1</guid>
+            <pubDate>Fri, 14 Dec 2018 16:47:25 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/5/02/755447956746025.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Лукашенко заподозрил Россию в стремлении присоединить Белоруссию]]></title>
+            <link>https://www.rbc.ru/politics/14/12/2018/5c13aa219a794759837b27bf</link>
+            <description><![CDATA[Белорусский лидер считает, что под предлогом «глубокой интеграции» Москва хочет включить его страну в состав России. Он подчеркнул, что ясно понимает все намеки, но считает, что суверенитет для Белоруссии — это «святое»]]></description>
+            <author>Анна Трунина</author>
+            <guid>5c13aa219a794759837b27bf</guid>
+            <pubDate>Fri, 14 Dec 2018 16:42:27 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/4/33/755447951603334.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Активиста Мохнаткина освободили из-под стражи]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c13af669a79475d651572ca</link>
+            <guid>5c13af669a79475d651572ca</guid>
+            <pubDate>Fri, 14 Dec 2018 16:38:42 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Клишас и Луговой внесли законопроект о суверенном Рунете]]></title>
+            <link>https://www.rbc.ru/politics/14/12/2018/5c1394129a79474fb3ff3ec8</link>
+            <description><![CDATA[Парламентарии разработали меры по защите российского интернета от угроз со стороны других государств, в частности США. Эти меры гарантируют работу Рунета при невозможности подключения к зарубежным серверам]]></description>
+            <author>Евгения Кузнецова</author>
+            <guid>5c1394129a79474fb3ff3ec8</guid>
+            <pubDate>Fri, 14 Dec 2018 16:34:29 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/4/99/755447948402994.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Набиуллина прокомментировала гипотетическую продажу Альфа-банка]]></title>
+            <link>https://www.rbc.ru/finances/14/12/2018/5c13ad559a79475c00ced305</link>
+            <description><![CDATA[Глава ЦБ ушла от прямого ответа на просьбу определить отношение регулятора к возможной покупке госбанком частного Альфа-банка, но напомнила, что ранее ЦБ поддержал инициативу ФАС об ограничении права госбанков на покупку частных]]></description>
+            <author>Антон Фейнберг</author>
+            <guid>5c13ad559a79475c00ced305</guid>
+            <pubDate>Fri, 14 Dec 2018 16:26:49 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/9/67/755447942192679.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[В Дагестане задержали главу района]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c13a9a89a79475a2e086b20</link>
+            <guid>5c13a9a89a79475a2e086b20</guid>
+            <pubDate>Fri, 14 Dec 2018 16:20:34 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Коэн усомнился в правдивости слов Трампа о расследовании Мюллера]]></title>
+            <link>https://www.rbc.ru/politics/14/12/2018/5c13ab439a79475b0fc2b463</link>
+            <description><![CDATA[Бывший адвокат президента США также рассказал, что лгал в интересах Трампа на протяжении десяти лет и объяснил, что делал это из преданности]]></description>
+            <author>Андрей Гатинский</author>
+            <guid>5c13ab439a79475b0fc2b463</guid>
+            <pubDate>Fri, 14 Dec 2018 16:17:27 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/0/05/755447936379050.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Лукашенко сообщил об извинениях Путина и Назарбаева на саммите ЕврАзЭС]]></title>
+            <link>https://www.rbc.ru/politics/14/12/2018/5c139b1a9a794753b1e5b364</link>
+            <description><![CDATA[На прошедшем саммите Евразийского экономического союза в ходе обсуждения цен на газ возникла «каша», в результате которой потом всем пришлось извиняться, заявил Александр Лукашенко. Он также опроверг, что приносил извинения Путину]]></description>
+            <author>Анна Трунина</author>
+            <guid>5c139b1a9a794753b1e5b364</guid>
+            <pubDate>Fri, 14 Dec 2018 16:07:09 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/5/32/755447931440325.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[В «Победе» допустили введение платы за стаканчики для воды на борту]]></title>
+            <link>https://www.rbc.ru/society/14/12/2018/5c139e809a7947558d8916d3</link>
+            <description><![CDATA[Взимание платы за пластиковые стаканчики в «Победе» начали обсуждать после того, как суд не позволил авиакомпании сократить число разрешенных к провозу сверх ручной клади предметов. Но пассажиры смогут наливать воду в свою тару]]></description>
+            <author>Валерия Комарова, Наталья Демченко</author>
+            <guid>5c139e809a7947558d8916d3</guid>
+            <pubDate>Fri, 14 Dec 2018 16:06:23 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/0/01/755447930268010.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Глава Минприроды допустил дефицит алмазов в России]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c13a62e9a794758cd755997</link>
+            <guid>5c13a62e9a794758cd755997</guid>
+            <pubDate>Fri, 14 Dec 2018 16:03:12 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[«Аэрофлот» вновь выиграл право на перевозку первых лиц государства]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c1398ed9a794752ba75303f</link>
+            <guid>5c1398ed9a794752ba75303f</guid>
+            <pubDate>Fri, 14 Dec 2018 15:49:09 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Минобороны назвало «дилетантским» заявление посла США о Ту-160]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c13a2149a794756f5934d15</link>
+            <guid>5c13a2149a794756f5934d15</guid>
+            <pubDate>Fri, 14 Dec 2018 15:40:30 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Парламент Косово утвердил создание армии]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c139cee9a79475489b13c2e</link>
+            <guid>5c139cee9a79475489b13c2e</guid>
+            <pubDate>Fri, 14 Dec 2018 15:18:55 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[«Газпром» сообщил о первой за 10 лет поставке импортного СПГ в Россию]]></title>
+            <link>https://www.rbc.ru/economics/14/12/2018/5c13922e9a79474fabdcb974</link>
+            <description><![CDATA[Партию сжиженного природного газа из Сингапура в Калининград доставит судно «Маршал Василевский», она предназначена для запуска нового терминала «Газпрома» в Калининградской области]]></description>
+            <author>Людмила Подобедова, Григорий Дубов</author>
+            <guid>5c13922e9a79474fabdcb974</guid>
+            <pubDate>Fri, 14 Dec 2018 15:14:36 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/1/27/755447901027271.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Mazda отзовет в России более 2,8 тыс. автомобилей]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c13922e9a79474f754eba72</link>
+            <guid>5c13922e9a79474f754eba72</guid>
+            <pubDate>Fri, 14 Dec 2018 15:09:52 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Множество Х: почему Сбербанку понадобился новый бренд]]></title>
+            <link>https://www.rbc.ru/finances/14/12/2018/5c139a6a9a794752707d12e4</link>
+            <description><![CDATA[Структуру, которая будет координировать развитие экосистемы Сбербанка с другими бизнес-блоками, возглавит Марк Завадский. Источники РБК говорят, что SberX может стать основой для брендинга нефинансовых элементов экосистемы]]></description>
+            <author>Екатерина Литова, Петр Канаев</author>
+            <guid>5c139a6a9a794752707d12e4</guid>
+            <pubDate>Fri, 14 Dec 2018 15:01:12 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/7/88/755447892123887.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Медведев утвердил новую ТОР в Ивановской области]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c1396f69a794751d43c5058</link>
+            <guid>5c1396f69a794751d43c5058</guid>
+            <pubDate>Fri, 14 Dec 2018 14:59:49 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Лавров заявил о применении «своеобразных пыток» к Бутиной в США]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c138b779a79474c426bdab8</link>
+            <guid>5c138b779a79474c426bdab8</guid>
+            <pubDate>Fri, 14 Dec 2018 14:57:57 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Михалков, Путин и Загитова: кого россияне считают людьми года]]></title>
+            <link>https://www.rbc.ru/photoreport/14/12/2018/5c136e0d9a79473d4796889d</link>
+            <description><![CDATA[Россияне выбрали людей года в сферах политики, спорта и культуры. Опрос провел фонд «Общественное мнение». Политиком года стал Владимир Путин, среди спортсменов лидирует фигуристка Алина Загитова, а в области культуры первое место занял Никита Михалков. Кто еще вошел в список людей года по выбору россиян — в обзоре РБК]]></description>
+            <author>Анастасия Антипова</author>
+            <guid>5c136e0d9a79473d4796889d</guid>
+            <pubDate>Fri, 14 Dec 2018 14:42:33 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/3/33/755447776262333.jpg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Кремль объяснил необходимость переговоров Путина и Трампа]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c13933b9a79475021028ed0</link>
+            <guid>5c13933b9a79475021028ed0</guid>
+            <pubDate>Fri, 14 Dec 2018 14:40:27 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Церемония вручения Премии РБК 2018. Как это было]]></title>
+            <link>https://www.rbc.ru/business/14/12/2018/5c111ecc9a7947138d140b29</link>
+            <description><![CDATA[10 декабря в Москве в пятый раз вручили Премию РБК в шести номинациях. Всего в шорт-лист вошли 23 финалиста. Как прошла церемония — смотрите на РБК]]></description>
+            <guid>5c111ecc9a7947138d140b29</guid>
+            <pubDate>Fri, 14 Dec 2018 14:34:17 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Социологи определили главное событие и человека 2018 года]]></title>
+            <link>https://www.rbc.ru/society/14/12/2018/5c1373ab9a79473ecfc70fb1</link>
+            <description><![CDATA[В категории «политики» человеком года большинство россиян назвали Владимира Путина. Среди спортсменов, а также деятелей культуры и искусства выбрать лидера оказалось труднее. А главным событием года стал чемпионат мира по футболу]]></description>
+            <author>Григорий Дубов, Илья Лакстыгал, Мария Кокорева</author>
+            <guid>5c1373ab9a79473ecfc70fb1</guid>
+            <pubDate>Fri, 14 Dec 2018 14:33:03 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/4/03/755447873534034.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Правозащитники заявили о взыскании с МВД 30 тыс. руб. за пытки в полиции]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c138ef19a79474e317c2485</link>
+            <guid>5c138ef19a79474e317c2485</guid>
+            <pubDate>Fri, 14 Dec 2018 14:23:10 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[МВД решило закупить 800 автозаков на 2,4 млрд руб.]]></title>
+            <link>https://www.rbc.ru/society/14/12/2018/5c1384d69a794748eef6a0e8</link>
+            <description><![CDATA[До ноября 2019 года МВД рассчитывает получить более 800 новых автозаков для полиции девяти российских регионов. Более 600 из них — оперативно-служебные автомобили вместимостью до семи задержанных]]></description>
+            <author>Наталья Демченко, Дада Линделл</author>
+            <guid>5c1384d69a794748eef6a0e8</guid>
+            <pubDate>Fri, 14 Dec 2018 14:13:41 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/6/47/755447861785476.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[В США предъявили обвинения бывшему замглавы «Военторга»]]></title>
+            <link>https://www.rbc.ru/politics/14/12/2018/5c137e139a794744a111a53e</link>
+            <description><![CDATA[В США Леонида Тейфа и его жену обвиняют в выводе из России десятков миллионов долларов. С 2010 по 2012 год он получил откаты на $150 млн. Об этих обвинениях стало известно после обыска у Тейфов на прошлой неделе]]></description>
+            <author>Евгений Пудовкин</author>
+            <guid>5c137e139a794744a111a53e</guid>
+            <pubDate>Fri, 14 Dec 2018 14:08:14 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/6/07/755447861168076.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Рубль отыграл часть потерь на фоне решения ЦБ о повышении ставки]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c138a049a79474b22ee5b14</link>
+            <guid>5c138a049a79474b22ee5b14</guid>
+            <pubDate>Fri, 14 Dec 2018 14:00:26 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[«Яндекс» объяснил ошибку с появлением даты смерти Порошенко в поиске]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c1388959a79474a700dc917</link>
+            <guid>5c1388959a79474a700dc917</guid>
+            <pubDate>Fri, 14 Dec 2018 13:54:43 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[ФСБ задержала вице-премьера Чувашии по делу о злоупотреблении полномочиям]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c13772b9a794741c55966f0</link>
+            <guid>5c13772b9a794741c55966f0</guid>
+            <pubDate>Fri, 14 Dec 2018 13:48:12 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Связь времен: когда в России исчезнут кнопочные мобильные телефоны]]></title>
+            <link>https://www.rbc.ru/technology_and_media/14/12/2018/5c1379ca9a794742aea271be</link>
+            <description><![CDATA[По прогнозу Cisco, к 2022 году кнопочные мобильные телефоны в России почти исчезнут. Каждый россиянин будет использовать в среднем по шесть подключенных к мобильной сети устройств — смартфонов, планшетов и «умных» телевизоров]]></description>
+            <author>Александра Посыпкина</author>
+            <guid>5c1379ca9a794742aea271be</guid>
+            <pubDate>Fri, 14 Dec 2018 13:38:54 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/7/21/755447841909217.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[В Кремле отреагировали на слова Леонтьева о главе Хакасии]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c1382949a794746ce0e7d81</link>
+            <guid>5c1382949a794746ce0e7d81</guid>
+            <pubDate>Fri, 14 Dec 2018 13:35:28 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[ЦБ вернется к закупке валюты на открытом рынке в январе]]></title>
+            <link>https://www.rbc.ru/finances/14/12/2018/5c137bfb9a794743c28d7bd9</link>
+            <description><![CDATA[Регулятор принял решение возобновить в январе покупки валюты для Минфина на открытом рынке, прерванные в августе этого года. Закупки были прерваны из-за повышенной волатильности курса рубля на фоне угрозы новых санкций]]></description>
+            <author>Павел Казарновский</author>
+            <guid>5c137bfb9a794743c28d7bd9</guid>
+            <pubDate>Fri, 14 Dec 2018 13:31:38 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/4/39/755447840123394.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[ЦБ повысил ключевую ставку второй раз за год]]></title>
+            <link>https://www.rbc.ru/finances/14/12/2018/5c136ef59a79473e11c00d11</link>
+            <description><![CDATA[Банк России решил повысить ключевую ставку на 0,25 п.п., до 7,75%, — это второе повышение за год. Оно носит упреждающий характер и связано с негативным влиянием на инфляцию внешних факторов и повышения НДС, заявили в ЦБ]]></description>
+            <author>Павел Казарновский</author>
+            <guid>5c136ef59a79473e11c00d11</guid>
+            <pubDate>Fri, 14 Dec 2018 13:30:38 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/4/51/755447853310514.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Один из крупнейших независимых НПЗ России возобновил работу]]></title>
+            <link>https://www.rbc.ru/business/14/12/2018/5c136e749a79473daa5e7bc4</link>
+            <description><![CDATA[Антипинский НПЗ снова начал переработку нефти после возобновления поставок сырья. С начала декабря он прекратил работы из-за отсутствия маршрутных поручений]]></description>
+            <author>Людмила Подобедова, Григорий Дубов</author>
+            <guid>5c136e749a79473daa5e7bc4</guid>
+            <pubDate>Fri, 14 Dec 2018 13:26:13 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/6/53/755447784360536.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Синоптики предупредили о похолодании в Москве в выходные]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c137c949a7947440add919e</link>
+            <guid>5c137c949a7947440add919e</guid>
+            <pubDate>Fri, 14 Dec 2018 13:00:48 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Минздрав начал разработку закона о запрете покупки алкоголя до 21 года]]></title>
+            <link>https://www.rbc.ru/society/14/12/2018/5c1377aa9a79474193e1e145</link>
+            <description><![CDATA[Глава ведомства Вероника Скворцова указала на рост заболеваемости из-за злоупотребления спиртным, а также на международный опыт повышения возраста продажи алкоголя]]></description>
+            <author>Григорий Дубов, Егор Губернаторов</author>
+            <guid>5c1377aa9a79474193e1e145</guid>
+            <pubDate>Fri, 14 Dec 2018 12:44:55 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/3/99/755447809344993.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Депутат Козак купил обвиненный в разжигании вражды украинский телеканал]]></title>
+            <link>https://www.rbc.ru/technology_and_media/14/12/2018/5c13734a9a79473fcae9d3ab</link>
+            <description><![CDATA[Депутат Верховной рады от партии «Оппозиционный блок» Тарас Козак стал новым владельцем телеканала «112 Украина». Прежний хозяин, Эдуард Кац, решил покинуть медиарынок республики, объяснив уход проблемами со свободой слова]]></description>
+            <author>Евгений Калюков</author>
+            <guid>5c13734a9a79473fcae9d3ab</guid>
+            <pubDate>Fri, 14 Dec 2018 12:44:23 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/9/85/755447810435859.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Завод «Электроцинк» во Владикавказе решили законсервировать после пожара]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c1374d89a7947409316dae4</link>
+            <guid>5c1374d89a7947409316dae4</guid>
+            <pubDate>Fri, 14 Dec 2018 12:32:03 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[«Энергомаш» передал три ракетных двигателя заказчику из США]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c1369419a79473ac5377261</link>
+            <guid>5c1369419a79473ac5377261</guid>
+            <pubDate>Fri, 14 Dec 2018 11:41:49 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[ЦБ аннулировал лицензию у принадлежащего украинцам московского банка]]></title>
+            <link>https://www.rbc.ru/economics/14/12/2018/5c1356639a79473451474a2d</link>
+            <description><![CDATA[Рунэтбанк занимает 640-е место в банковской системе России. Причиной аннулирования лицензии стало решение акционеров о ликвидации банка]]></description>
+            <author>Григорий Дубов</author>
+            <guid>5c1356639a79473451474a2d</guid>
+            <pubDate>Fri, 14 Dec 2018 10:27:26 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/6/65/755447752647656.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Правительство составило список аэропортов с duty free в зонах прилета]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c1358729a79473171ba0f69</link>
+            <guid>5c1358729a79473171ba0f69</guid>
+            <pubDate>Fri, 14 Dec 2018 10:25:53 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Лидер «Шалтая-Болтая» займется борьбой с хакерами]]></title>
+            <link>https://www.rbc.ru/technology_and_media/14/12/2018/5c1298689a79470500750074</link>
+            <description><![CDATA[Владимир Аникеев после освобождения из СИЗО занялся обеспечением кибербезопасности. Этот бизнес строится на доверии, а бывших хакеров не бывает, скептичны участники рынка]]></description>
+            <author>Анна Балашова, Маргарита Алехина, Евгения Баленко</author>
+            <guid>5c1298689a79470500750074</guid>
+            <pubDate>Fri, 14 Dec 2018 10:00:43 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/5/39/755447715406395.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Ценовое потепление: почему российские томаты стали дешевле импортных]]></title>
+            <link>https://www.rbc.ru/business/14/12/2018/5c1224fb9a79475c10739948</link>
+            <description><![CDATA[Отечественные помидоры в 2018 году впервые за шесть лет стоили дешевле импортных, а цены на огурцы практически сравнялись. Помогли девальвация рубля, хороший урожай и инвестиционный бум в овощеводстве]]></description>
+            <author>Елена Сухорукова</author>
+            <guid>5c1224fb9a79475c10739948</guid>
+            <pubDate>Fri, 14 Dec 2018 08:32:17 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/2/67/755447899521672.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Цифровой градус: зачем «Яндекс.Маркет» витрина с алкоголем]]></title>
+            <link>https://www.rbc.ru/technology_and_media/14/12/2018/5c1261fc9a79477679f97e5d</link>
+            <description><![CDATA[На сервисе «Яндекс.Маркет» появилась новая категория — «алкоголь». Пока власти не решили, разрешать ли онлайн-продажу спиртного в России, пользователи смогут только сравнивать цены и узнавать о наличии товара в магазине]]></description>
+            <author>Александра Посыпкина, Ольга Дубравицкая</author>
+            <guid>5c1261fc9a79477679f97e5d</guid>
+            <pubDate>Fri, 14 Dec 2018 08:00:11 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/1/66/755447253784661.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Сделка под напряжением: где «Ростех» ищет газовые турбины для Тамани]]></title>
+            <link>https://www.rbc.ru/business/14/12/2018/5c0e6bf69a79473484b106d2</link>
+            <description><![CDATA[«Дочка» «Ростеха», попавшая под санкции из-за скандала с турбинами Siemens в Крыму, снова ищет импортные турбины — теперь для электростанции в Тамани. Потенциальный продавец может найтись в Латинской Америке, Китае или Иране]]></description>
+            <author>Алина Фадеева</author>
+            <guid>5c0e6bf69a79473484b106d2</guid>
+            <pubDate>Fri, 14 Dec 2018 07:29:46 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/6/29/755447307565296.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Toyota отзовет в США 143 тыс. автомобилей из-за дефекта тормозной системы]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c13135a9a794722fdb07625</link>
+            <guid>5c13135a9a794722fdb07625</guid>
+            <pubDate>Fri, 14 Dec 2018 05:23:51 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Венчурный фонд АФК «Система» увеличил свою долю в онлайн-ретейлере Ozon]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c127c669a794781913909a2</link>
+            <guid>5c127c669a794781913909a2</guid>
+            <pubDate>Fri, 14 Dec 2018 02:16:30 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[СМИ узнали о выкупе «Газпромом» «Лахта Центра» у собственной «дочки»]]></title>
+            <link>https://www.rbc.ru/business/14/12/2018/5c12dd509a7947189b50d53c</link>
+            <description><![CDATA[Самый высокий небоскреб Европы, в котором «Газпром» намерен разместить свою штаб-квартиру, компания выкупит у собственной «дочки» — «Газпром нефти». Сумма сделки составляет около 120 млрд руб.]]></description>
+            <author>Георгий Тадтаев</author>
+            <guid>5c12dd509a7947189b50d53c</guid>
+            <pubDate>Fri, 14 Dec 2018 01:52:49 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/7/33/755447418023337.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Земли для аграриев подешевели впервые с начала кризиса 2014 года]]></title>
+            <link>https://www.rbc.ru/business/13/12/2018/5c1271809a79477cc2e997f6</link>
+            <description><![CDATA[Впервые с начала кризиса цена сельхозугодий снижается, подсчитал «Совэкон». Одна из причин — рекордный урожай 2017-го, негативно повлиявший на аграриев. Сельхозугодья дешевеют и из-за падения интереса у инвесторов]]></description>
+            <author>Елена Сухорукова</author>
+            <guid>5c1271809a79477cc2e997f6</guid>
+            <pubDate>Thu, 13 Dec 2018 21:50:45 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/8/41/755447273959418.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Moody’s предсказало ослабление финансовой мощи США]]></title>
+            <link>https://www.rbc.ru/economics/13/12/2018/5c1270dc9a79477ca984c1f7</link>
+            <description><![CDATA[Дефицит бюджета США будет расти в 2019 году и дальше, чистый госдолг в течение десяти лет увеличится с 78 до 100% ВВП, а расходы на его обслуживание будут поглощать все больше и больше доходов казны, предупредило Moody’s]]></description>
+            <author>Иван Ткачёв</author>
+            <guid>5c1270dc9a79477ca984c1f7</guid>
+            <pubDate>Thu, 13 Dec 2018 21:42:23 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/8/46/755447266818468.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Минстрой ответил на обвинения Счетной палаты в провале реформы]]></title>
+            <link>https://www.rbc.ru/economics/13/12/2018/5c129fc69a79470738ed5fbb</link>
+            <description><![CDATA[Минстрой признал неэффективность части механизмов, разработанных для реформы системы ценообразования в строительной отрасли. Счетная палата ранее заявила, что трехлетняя реформа не достигла своей цели]]></description>
+            <author>Маргарита Девяткина</author>
+            <guid>5c129fc69a79470738ed5fbb</guid>
+            <pubDate>Thu, 13 Dec 2018 21:37:01 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/3/83/755447267019833.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Отсрочка для кассиров: когда бизнес начнут штрафовать за старые чеки]]></title>
+            <link>https://www.rbc.ru/economics/13/12/2018/5c1286ec9a79478546be9454</link>
+            <description><![CDATA[Предприниматели должны будут обновить кассы для корректного отображения новой ставки НДС до конца первого квартала 2019 года, а не до 1 января, как планировалось ранее. Такие разъяснения выпустила ФНС]]></description>
+            <author>Ольга Агеева, Ирина Парфентьева, Антон Фейнберг, Иван Ткачёв</author>
+            <guid>5c1286ec9a79478546be9454</guid>
+            <pubDate>Thu, 13 Dec 2018 20:54:43 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/3/96/755447258194963.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Открыли счет: почему Госдума ужесточает правила строительства жилья]]></title>
+            <link>https://www.rbc.ru/business/13/12/2018/5c12789f9a79477fb66fa0f5</link>
+            <description><![CDATA[Профильный комитет Госдумы подготовил новые поправки в закон о долевом строительстве. Депутаты предлагают с 1 июля 2019 года сделать обязательными продажи по эскроу-счетам не только для новых, но и для уже строящихся проектов]]></description>
+            <author>Надежда Федорова</author>
+            <guid>5c12789f9a79477fb66fa0f5</guid>
+            <pubDate>Thu, 13 Dec 2018 20:05:34 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/3/37/755447208925373.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Один из крупнейших турконцернов мира снизил долю в СП с Мордашовым]]></title>
+            <link>https://www.rbc.ru/business/13/12/2018/5c1289db9a7947862aac2d57</link>
+            <description><![CDATA[Туристический концерн TUI Group вновь снизил долю в своем российском представительстве в пользу Алексея Мордашова. Теперь у TUI осталось только 10%, тогда как при создании СП в 2009 году было 49%]]></description>
+            <author>Сергей Соболев</author>
+            <guid>5c1289db9a7947862aac2d57</guid>
+            <pubDate>Thu, 13 Dec 2018 19:55:25 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/0/59/755447205087590.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[«Нафтогаз» заявил об успехе в борьбе за данные об активах «Газпрома» в ЕС]]></title>
+            <link>https://www.rbc.ru/business/13/12/2018/5c1276f09a79477e98f5d74a</link>
+            <description><![CDATA[Три американские компании должны предоставить «Нафтогазу» данные об активах «Газпрома» в Европе. Такое решение, заявляет украинский концерн, принял суд в Нью-Йорке]]></description>
+            <author>Артем Филипенок</author>
+            <guid>5c1276f09a79477e98f5d74a</guid>
+            <pubDate>Thu, 13 Dec 2018 18:37:19 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/3/41/755447158279413.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Минфин и страховщики раскрыли детали проекта базы застрахованного жилья]]></title>
+            <link>https://www.rbc.ru/finances/13/12/2018/5c12669f9a794778803045c9</link>
+            <description><![CDATA[Единая база «АИС жилье» должна заработать с августа 2019 года. В ее создании участвуют сразу несколько ведомств. Оператором базы будет Всероссийский союз страховщиков]]></description>
+            <author>Анна Трунина, Екатерина Литова</author>
+            <guid>5c12669f9a794778803045c9</guid>
+            <pubDate>Thu, 13 Dec 2018 18:21:28 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/6/73/755447148808736.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Разработчик сообщил об испытаниях малого ударного дрона-перехватчика]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c1275fe9a79477e9ac4c0bc</link>
+            <guid>5c1275fe9a79477e9ac4c0bc</guid>
+            <pubDate>Thu, 13 Dec 2018 18:16:59 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Apple потратит $1 млрд на обустройство нового кампуса в Техасе]]></title>
+            <link>https://www.rbc.ru/business/13/12/2018/5c126eaf9a79477bcadd41fc</link>
+            <description><![CDATA[Кампус построят в столице Техаса, городе Остин, где на Apple уже работает больше людей, чем в любом другом месте, кроме Купертино. В перспективе Apple планирует стать крупнейшим частным работодателем Остина]]></description>
+            <author>Евгений Калюков</author>
+            <guid>5c126eaf9a79477bcadd41fc</guid>
+            <pubDate>Thu, 13 Dec 2018 18:13:18 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/9/30/755447143053309.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[К чему приведет остановка «печатного станка» в Европе]]></title>
+            <link>https://www.rbc.ru/finances/13/12/2018/5c1255b59a79477239f337b3</link>
+            <description><![CDATA[ЕЦБ подтвердил свое обещание и объявил о завершении программы количественного смягчения, которая обошлась регулятору в €2,6 трлн. Программа снизила бюджетные и долговые проблемы ряда стран еврозоны, но не решила их окончательно]]></description>
+            <author>Павел Казарновский</author>
+            <guid>5c1255b59a79477239f337b3</guid>
+            <pubDate>Thu, 13 Dec 2018 16:29:25 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/7/68/755447647409687.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Bloomberg узнал о сокращении присутствия Morgan Stanley в России]]></title>
+            <link>https://www.rbc.ru/finances/13/12/2018/5c124ec79a79476edc777370</link>
+            <description><![CDATA[По данным источников Bloomberg, Morgan Stanley намерен закрыть свое трейдинговое подразделение и отказаться от работы на фондовом и валютном рынках в России]]></description>
+            <author>Евгений Калюков</author>
+            <guid>5c124ec79a79476edc777370</guid>
+            <pubDate>Thu, 13 Dec 2018 15:44:16 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/9/74/755447053139749.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[МЭА спрогнозировало стабилизацию цен на нефть на уровне $60 за баррель]]></title>
+            <link>https://www.rbc.ru/economics/13/12/2018/5c1231c79a79476221dcb026</link>
+            <description><![CDATA[Эксперты Международного энергетического агентства полагают, что заключение новой сделки ОПЕК+ позволит снизить волатильность на нефтяном рынке, обеспечив его сбалансированность]]></description>
+            <author>Евгений Калюков</author>
+            <guid>5c1231c79a79476221dcb026</guid>
+            <pubDate>Thu, 13 Dec 2018 14:18:37 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/5/88/755447002283885.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Кадыров заявил о необходимости большего финансирования процветания Чечни]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c122a1b9a79475ea0c63c6e</link>
+            <guid>5c122a1b9a79475ea0c63c6e</guid>
+            <pubDate>Thu, 13 Dec 2018 13:28:35 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Греф назвал причины отсутствия кешбэка у Сбербанка]]></title>
+            <link>https://www.rbc.ru/finances/13/12/2018/5c12137f9a794754cefa5308</link>
+            <description><![CDATA[Переход на возврат клиентам части потраченных по картам средств «живыми деньгами» был бы неправильным для банка такого размера в связи с высокой убыточностью, считает глава Сбербанка. Программу «Спасибо» он пообещал сохранить]]></description>
+            <author>Анна Трунина, Екатерина Литова</author>
+            <guid>5c12137f9a794754cefa5308</guid>
+            <pubDate>Thu, 13 Dec 2018 11:37:22 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/1/93/755446905104931.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Минобороны показало видео полетов Ту-160 над Карибским морем]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c120d4d9a7947520def9974</link>
+            <guid>5c120d4d9a7947520def9974</guid>
+            <pubDate>Thu, 13 Dec 2018 10:59:44 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Аудиторы указали Минстрою на провал инициированной Путиным реформы]]></title>
+            <link>https://www.rbc.ru/economics/13/12/2018/5c11f75d9a79474bedc2119b</link>
+            <description><![CDATA[Счетная палата отметила безрезультатность реформы ценообразования в области строительства, провести которую президент поручил еще в 2015 году. С тех пор на нее было потрачено почти 2 млрд руб.]]></description>
+            <author>Андрей Гатинский</author>
+            <guid>5c11f75d9a79474bedc2119b</guid>
+            <pubDate>Thu, 13 Dec 2018 09:22:14 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/8/87/755446823597878.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Китай закупил американскую сою впервые после торгового перемирия с США]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c11eda09a79474913996e1b</link>
+            <guid>5c11eda09a79474913996e1b</guid>
+            <pubDate>Thu, 13 Dec 2018 09:12:57 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Рискованная ставка: как повышение НДС ударит по исполнителям госзаказов]]></title>
+            <link>https://www.rbc.ru/technology_and_media/13/12/2018/5c11095b9a79470ad5923123</link>
+            <description><![CDATA[Исполнители госзаказов опасаются, что повышение НДС с 1 января сделает их контракты невыгодными: в них невозможно заложить новую ставку налога. Сильнее других может пострадать ИТ-отрасль, следует из письма ТПП в министерства]]></description>
+            <author>Александра Посыпкина, Анна Балашова, Надежда Федорова, Евгения Баленко</author>
+            <guid>5c11095b9a79470ad5923123</guid>
+            <pubDate>Thu, 13 Dec 2018 08:05:07 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/3/02/755446375841023.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Детям и церквям: сколько россияне тратят на благотворительность]]></title>
+            <link>https://www.rbc.ru/finances/13/12/2018/5c110e579a79470c7353060b</link>
+            <description><![CDATA[Эксперты оценили расходы на благотворительность в России в 340–460 млрд руб. в год, из них половина — личные пожертвования населения и предпринимателей. Средний чек состоятельных россиян — 76 тыс. руб., у остальных — 8 тыс. руб.]]></description>
+            <author>Екатерина Литова, Юлия Старостина</author>
+            <guid>5c110e579a79470c7353060b</guid>
+            <pubDate>Thu, 13 Dec 2018 07:00:15 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/0/19/755446758870190.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[СМИ назвали претендентов на украинскую «дочку» ВТБ]]></title>
+            <link>https://www.rbc.ru/finances/13/12/2018/5c11b9719a79473ef0d0178f</link>
+            <description><![CDATA[Три крупных игрока на украинском рынке претендуют на дочерний банк финансовой группы ВТБ на Украине, пишет газета «Коммерсантъ». Наибольшие шансы, по данным издания, у Рината Ахметова и его банка ПУМБ]]></description>
+            <author>Мария Бондаренко</author>
+            <guid>5c11b9719a79473ef0d0178f</guid>
+            <pubDate>Thu, 13 Dec 2018 04:49:18 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/6/04/755446658602046.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Собянин сохранил минимальную пенсию на 2019 год на уровне ₽17,5 тыс.]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c11a9f89a79473adbe03563</link>
+            <guid>5c11a9f89a79473adbe03563</guid>
+            <pubDate>Thu, 13 Dec 2018 03:45:40 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Хуже тренда: почему рубль ослабел в 2018 году после двух лет роста]]></title>
+            <link>https://www.rbc.ru/economics/13/12/2018/5c111d5d9a7947135a73eb7a</link>
+            <description><![CDATA[Рубль в 2018 году пока ослабел на 13% и, скорее всего, завершит год в минусе после роста в 2016–2017 годах. Дешевели все валюты развивающихся стран, но рубль сильнее — из-за санкционных историй]]></description>
+            <author>Иван Ткачёв, Ольга Агеева</author>
+            <guid>5c111d5d9a7947135a73eb7a</guid>
+            <pubDate>Thu, 13 Dec 2018 00:12:31 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/3/08/755446402330083.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Гендиректор системы SWIFT уйдет в отставку]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c113f519a79471f79372527</link>
+            <guid>5c113f519a79471f79372527</guid>
+            <pubDate>Wed, 12 Dec 2018 20:15:20 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Скважины вместо заводов: за счет чего растет российская экономика]]></title>
+            <link>https://www.rbc.ru/economics/12/12/2018/5c111d649a7947133c20ae8c</link>
+            <description><![CDATA[Росстат повысил оценку роста ВВП в третьем квартале. Вырасти экономике на 1,5% помогла добыча полезных ископаемых. Ее вклад в ВВП увеличился, а доля обрабатывающих производств, наоборот, сократилась]]></description>
+            <author>Антон Фейнберг</author>
+            <guid>5c111d649a7947133c20ae8c</guid>
+            <pubDate>Wed, 12 Dec 2018 19:48:34 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/7/28/755446346882287.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[ОПЕК повысила прогноз добычи нефти в России]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c1126899a794716f2c830a6</link>
+            <guid>5c1126899a794716f2c830a6</guid>
+            <pubDate>Wed, 12 Dec 2018 18:26:53 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[ЦБ сообщил о стремительном росте объема переводов с карты на карту]]></title>
+            <link>https://www.rbc.ru/finances/12/12/2018/5c11179d9a7947103c6db27a</link>
+            <description><![CDATA[По данным регулятора, только за январь—сентябрь 2018 года общий объем операций по переводу средств с одной банковской карты на другую составил 19,2 трлн руб., что больше, чем за весь 2017 год]]></description>
+            <author>Евгений Калюков</author>
+            <guid>5c11179d9a7947103c6db27a</guid>
+            <pubDate>Wed, 12 Dec 2018 17:56:59 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/5/17/755446273464175.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Связь-банк на сдачу: как ВЭБ избавится от ненужного актива]]></title>
+            <link>https://www.rbc.ru/finances/12/12/2018/5c111ec99a794713b01541f7</link>
+            <description><![CDATA[ВЭБ обсуждает с Минфином и ЦБ передачу Связь-банка, попавшего к нему на баланс в кризис 2008 года, государственному Промсвязьбанку. Для ВЭБа банки — непрофильные активы, а покупателей на них он не может найти уже несколько лет]]></description>
+            <author>Маргарита Девяткина, Павел Казарновский, Евгения Чернышова, Екатерина Литова</author>
+            <guid>5c111ec99a794713b01541f7</guid>
+            <pubDate>Wed, 12 Dec 2018 17:47:22 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/0/98/755446265479980.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Наследие футбола: рекламу пива на ТВ предложено оставить навсегда]]></title>
+            <link>https://www.rbc.ru/technology_and_media/12/12/2018/5c1107ed9a79470a605383c6</link>
+            <description><![CDATA[Временное разрешение на рекламу пива в СМИ предложено сделать постоянным — соответствующий законопроект внесен в Госдуму. Сейчас пивовары обеспечивают лишь 1% рекламных доходов телеканалов, раньше эта цифра была в четыре раза выше]]></description>
+            <author>Сергей Соболев, Мария Истомина</author>
+            <guid>5c1107ed9a79470a605383c6</guid>
+            <pubDate>Wed, 12 Dec 2018 16:23:13 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/7/28/755446452137287.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Google назвала самый популярный поисковый запрос 2018 года]]></title>
+            <link>https://www.rbc.ru/technology_and_media/12/12/2018/5c10ed729a7947fdb23057e2</link>
+            <description><![CDATA[Поисковая система Google представила статистику поисковых запросов 2018 года по разным странам. Самый большой интерес пользователей во всем мире вызвал чемпионат мира по футболу]]></description>
+            <author>Наталья Демченко</author>
+            <guid>5c10ed729a7947fdb23057e2</guid>
+            <pubDate>Wed, 12 Dec 2018 15:12:43 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/8/19/755446171854198.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[В Сбербанке спрогнозировали повышение ключевой ставки ЦБ]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c10e9bb9a7947fc35b3b203</link>
+            <guid>5c10e9bb9a7947fc35b3b203</guid>
+            <pubDate>Wed, 12 Dec 2018 14:07:02 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Сбербанк второй раз за полгода изменил прогноз по курсу рубля]]></title>
+            <link>https://www.rbc.ru/economics/12/12/2018/5c10ceac9a7947ef3f186e17</link>
+            <description><![CDATA[Сбербанк вновь повысил прогноз по среднему курсу рубля к доллару, а также изменил прогноз по цене на нефть на 2019–2020 годы]]></description>
+            <author>Артем Филипенок</author>
+            <guid>5c10ceac9a7947ef3f186e17</guid>
+            <pubDate>Wed, 12 Dec 2018 12:16:57 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/7/26/755446063107267.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Роскомнадзор пригрозил изменить закон для блокировки Google]]></title>
+            <link>https://www.rbc.ru/technology_and_media/12/12/2018/5c10cf489a7947effb84ac29</link>
+            <description><![CDATA[По действующему законодательству, отказ убрать из поисковой выдачи запрещенную информацию наказывается только штрафом]]></description>
+            <author>Андрей Гатинский, Екатерина Костина, Мария Кокорева</author>
+            <guid>5c10cf489a7947effb84ac29</guid>
+            <pubDate>Wed, 12 Dec 2018 12:06:55 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/8/86/755446057510868.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Орешкин сообщил о непубличном поиске инвесторов для приватизации]]></title>
+            <link>https://www.rbc.ru/economics/12/12/2018/5c10c3449a7947eb674bb6ae</link>
+            <description><![CDATA[При профицитном бюджете перед государством не стоит задача продать актив, необходимо обеспечить его активное развитие с участием стратегических партнеров, сказал министр]]></description>
+            <author>Антон Фейнберг</author>
+            <guid>5c10c3449a7947eb674bb6ae</guid>
+            <pubDate>Wed, 12 Dec 2018 11:27:20 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/0/61/755446032879610.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Орешкин заявил о ренессансе в отношениях России и Европы]]></title>
+            <link>https://www.rbc.ru/economics/12/12/2018/5c10b6919a7947e7402cc754</link>
+            <description><![CDATA[Отношения между Россией и Евросоюзом находятся на подъеме, несмотря на разговоры о санкциях. По словам министра экономического развития, об ограничениях говорит меньшинство европейских стран]]></description>
+            <author>Антон Фейнберг, Артем Филипенок</author>
+            <guid>5c10b6919a7947e7402cc754</guid>
+            <pubDate>Wed, 12 Dec 2018 10:25:30 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/8/72/755445995734728.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[NYT сообщила о связи кибератаки на Marriott cо спецслужбами Китая]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c109deb9a7947e0d146ff67</link>
+            <guid>5c109deb9a7947e0d146ff67</guid>
+            <pubDate>Wed, 12 Dec 2018 09:07:26 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Расплата за оплату: почему власти усиливают контроль за онлайн-покупками]]></title>
+            <link>https://www.rbc.ru/finances/12/12/2018/5c0e834a9a79473da4112360</link>
+            <description><![CDATA[Агрегаторов, обеспечивающих онлайн-оплаты, поставят под контроль кредитных организаций. Обязанностью агрегаторов станет идентификация сайтов для предотвращения нелегальных переводов, например в пользу казино]]></description>
+            <author>Евгения Чернышова</author>
+            <guid>5c0e834a9a79473da4112360</guid>
+            <pubDate>Wed, 12 Dec 2018 07:00:29 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/3/81/755445921690813.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Служебные романы: почему бумажные трудовые книжки отменяют досрочно]]></title>
+            <link>https://www.rbc.ru/economics/12/12/2018/5c0fbe889a7947a0fc16e454</link>
+            <description><![CDATA[Работодателям не придется шесть лет дублировать сведения о трудовой деятельности сотрудников в бумажном виде после перехода на электронные трудовые книжки с 2020 года, следует из доработанной версии законопроекта Минтруда]]></description>
+            <author>Ольга Агеева, Юлия Старостина</author>
+            <guid>5c0fbe889a7947a0fc16e454</guid>
+            <pubDate>Wed, 12 Dec 2018 00:01:19 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/1/08/755445506094081.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Экс-помощника Суркова назначили заместителем главы Минкомсвязи]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c100fad9a7947be79c91386</link>
+            <guid>5c100fad9a7947be79c91386</guid>
+            <pubDate>Tue, 11 Dec 2018 23:05:43 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Минэнерго поддержало идею внедрения «умных» счетчиков на газ]]></title>
+            <link>https://www.rbc.ru/technology_and_media/11/12/2018/5c1007dd9a7947bc5ca01fa5</link>
+            <description><![CDATA[Главным вопросом прорабатываемой инициативы является источник финансирования установки таких счетчиков. Ранее «Коммерсантъ» писал, что внедрение «умных» счетчиков на газ обойдется почти в 130 млрд руб.]]></description>
+            <author>Анна Трунина</author>
+            <guid>5c1007dd9a7947bc5ca01fa5</guid>
+            <pubDate>Tue, 11 Dec 2018 22:07:49 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/4/99/755445556196994.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Матвиенко раскритиковала переход на цифровое телевидение «вдогонку»]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c0fab089a79479a8a37a322</link>
+            <guid>5c0fab089a79479a8a37a322</guid>
+            <pubDate>Tue, 11 Dec 2018 16:35:38 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Роскомнадзор оштрафовал Google и пообещал проверить Twitter и Facebook]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c0f839d9a79478947d36454</link>
+            <guid>5c0f839d9a79478947d36454</guid>
+            <pubDate>Tue, 11 Dec 2018 12:38:52 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Как прошла церемония вручения Премии РБК]]></title>
+            <link>https://www.rbc.ru/photoreport/11/12/2018/5c0f4ee99a79477556f7fba4</link>
+            <description><![CDATA[Премию РБК в этом году вручили в пятый раз и по новым правилам. Двухступенчатая система голосования позволила выбрать лучших из широкого списка номинантов. В итоге награду получили представители бизнеса в шести номинациях]]></description>
+            <guid>5c0f4ee99a79477556f7fba4</guid>
+            <pubDate>Tue, 11 Dec 2018 11:39:59 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/6/05/755445073564056.jpg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Ставка на приставку: как 2 москвича сделали привод для инвалидных колясок]]></title>
+            <link>https://www.rbc.ru/own_business/11/12/2018/5c0a37659a7947b4e4848aa1</link>
+            <description><![CDATA[Решив помочь другу-инвалиду, Николай Юдин и Сергей Костеневич создали гаджет, позволяющий колясочникам передвигаться по улицам самостоятельно. Он дешевле западных аналогов, но продается пока в основном за рубеж]]></description>
+            <author>Светлана Романова</author>
+            <guid>5c0a37659a7947b4e4848aa1</guid>
+            <pubDate>Tue, 11 Dec 2018 09:50:08 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/6/03/755444420912036.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Ксения Собчак объявила об уходе из L'Officiel]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c0f2ed59a79476f027abe7e</link>
+            <guid>5c0f2ed59a79476f027abe7e</guid>
+            <pubDate>Tue, 11 Dec 2018 06:32:28 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Apple обжаловала запрет суда на продажу ряда моделей iPhone в Китае]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5c0f12e89a7947687cee59a0</link>
+            <guid>5c0f12e89a7947687cee59a0</guid>
+            <pubDate>Tue, 11 Dec 2018 04:32:49 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Google сообщила об утечке данных более 52 млн пользователей из-за ошибки]]></title>
+            <link>https://www.rbc.ru/technology_and_media/11/12/2018/5c0f033a9a794766b04420a5</link>
+            <description><![CDATA[Инцидент произошел в ноябре; сторонние программы могли запрашивать личные данные пользователей соцсети Google+ из-за ошибки в обновлении. После утечки в Google сообщили, что свернут работу соцсети к апрелю 2019 года]]></description>
+            <author>Григорий Дубов</author>
+            <guid>5c0f033a9a794766b04420a5</guid>
+            <pubDate>Tue, 11 Dec 2018 03:27:33 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/3/14/755444880241143.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[В Москве вручили Премию РБК 2018]]></title>
+            <link>https://www.rbc.ru/own_business/10/12/2018/5c0e365e9a79471e479c77db</link>
+            <description><![CDATA[10 декабря в Москве прошла церемония награждения лауреатов Премии РБК 2018. Пятый год подряд Премия РБК остается одной из главных наград за достижения в области бизнеса]]></description>
+            <author>Юлия Сапронова</author>
+            <guid>5c0e365e9a79471e479c77db</guid>
+            <pubDate>Mon, 10 Dec 2018 21:31:08 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/3/26/755444704885263.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[В Москве началось вручение Премии РБК]]></title>
+            <link>https://www.rbc.ru/own_business/10/12/2018/5c0e3c959a7947209181bb47</link>
+            <description><![CDATA[В РАМТе проходит церемония награждения лауреатов пятой Премии РБК. В этом году статуэтки получат герои шести номинаций. Позднее будет вручен приз зрительских симпатий]]></description>
+            <guid>5c0e3c959a7947209181bb47</guid>
+            <pubDate>Mon, 10 Dec 2018 20:41:19 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/0/14/755444557218140.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Завершилось голосование в номинации «Выбор читателей» Премии РБК]]></title>
+            <link>https://www.rbc.ru/own_business/10/12/2018/5c0e6e4b9a7947355821f706</link>
+            <guid>5c0e6e4b9a7947355821f706</guid>
+            <pubDate>Mon, 10 Dec 2018 16:54:55 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/9/10/755444499506109.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[3D-редактор от художника и ужины по подписке: два стартапа ноября]]></title>
+            <link>https://www.rbc.ru/own_business/08/12/2018/5c0a87b69a7947d5b3c19100</link>
+            <description><![CDATA[3D-редактор Polybrush, который должен упростить жизнь художникам, и сервис ужинов по подписке «Партия еды». РБК выбрал два самых интересных стартапа этого месяца]]></description>
+            <author>Иван Вуколов, Александр Грачев</author>
+            <guid>5c0a87b69a7947d5b3c19100</guid>
+            <pubDate>Sat, 08 Dec 2018 09:01:58 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[«Мы развивались без революций»: Аркадий Столпнер в проекте «Герои РБК»]]></title>
+            <link>https://www.rbc.ru/own_business/07/12/2018/5c0932709a7947730296ce59</link>
+            <description><![CDATA[Аркадий Столпнер построил крупнейшую в стране сеть центров томографии. Как начинался его бизнес, почему медицина должна быть платной, чем отличается хороший доктор — в проекте «Герои РБК»]]></description>
+            <guid>5c0932709a7947730296ce59</guid>
+            <pubDate>Fri, 07 Dec 2018 21:00:18 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Сущий БАД: как делать на биодобавках ₽130 млн в месяц с помощью нейросети]]></title>
+            <link>https://www.rbc.ru/own_business/07/12/2018/5c07ec619a7947168ea0dc6b</link>
+            <description><![CDATA[Используя ажиотаж вокруг модных компонентов диеты, два новичка закрепились на устоявшемся в России рынке. Для выхода за рубеж пришлось поработать над качеством — открыть свою фабрику и запустить на сайте конструктор биодобавок]]></description>
+            <author>Ксения Мельникова, Светлана Романова</author>
+            <guid>5c07ec619a7947168ea0dc6b</guid>
+            <pubDate>Fri, 07 Dec 2018 10:40:32 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/8/78/755441058580788.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Не врезаться в «памятник»: как заработать на сервисе по проверке машин]]></title>
+            <link>https://www.rbc.ru/own_business/04/12/2018/5c04ed409a7947b3a348fe55</link>
+            <description><![CDATA[Владелец автосалона Дмитрий Потапов разработал сервис, позволяющий проверять автомобиль на наличие обременений. Когда в кризис салон закрылся, он стал продавать услуги самого сервиса. Сейчас CheсkBuro проверяет 40 тыс. машин в год]]></description>
+            <author>Мария Шакирова</author>
+            <guid>5c04ed409a7947b3a348fe55</guid>
+            <pubDate>Tue, 04 Dec 2018 10:07:06 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/8/83/755438495207838.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Аналитики объяснили причины кадрового голода в России]]></title>
+            <link>https://www.rbc.ru/own_business/03/12/2018/5c050bde9a7947be2dd961ac</link>
+            <description><![CDATA[Количество вакансий и число кандидатов на их замещение растут сопоставимыми темпами, но компании не спешат набирать специалистов. Уровень работников в целом ниже требований компаний, а зарплатные ожидания слишком высоки]]></description>
+            <author>Светлана Романова, Илья Носырев</author>
+            <guid>5c050bde9a7947be2dd961ac</guid>
+            <pubDate>Mon, 03 Dec 2018 14:28:31 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/7/72/755438368240727.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Цифровая лихорадка: как изменился российский рынок труда в 2018 году]]></title>
+            <link>https://www.rbc.ru/own_business/03/12/2018/5bffdf6d9a79472a1871e0e2</link>
+            <description><![CDATA[В уходящем году digital-технологии перестали быть абстракцией для большинства российских компаний. Из-за этого сильно вырос спрос не только на ИТ-специалистов разного профиля, но и, как ни странно, на курьеров]]></description>
+            <author>Светлана Романова, Ксения Мельникова</author>
+            <guid>5bffdf6d9a79472a1871e0e2</guid>
+            <pubDate>Mon, 03 Dec 2018 10:09:55 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/3/97/755435879969973.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Начальник масштаба: какие риски возникают при быстром росте компании]]></title>
+            <link>https://www.rbc.ru/own_business/28/11/2018/5bfd32559a79475dd5d1b954</link>
+            <description><![CDATA[Неумение выйти из режима ручного управления, любовь к старым товарищам и неправильная воронка продаж — среди причин, которые губят проекты на этапе масштабирования, считают эксперты и финалисты Премии РБК]]></description>
+            <author>Мария Шакирова, Илья Носырев</author>
+            <guid>5bfd32559a79475dd5d1b954</guid>
+            <pubDate>Wed, 28 Nov 2018 10:24:20 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/6/49/755433319952496.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Физкульт-прикид: как заработать на спортивной одежде для корпораций]]></title>
+            <link>https://www.rbc.ru/own_business/27/11/2018/5bfbab1c9a794773c519e54a</link>
+            <description><![CDATA[Основатели BarsSport не сумели масштабировать бизнес по продаже футболок с логотипами компаний. Спасла мода на корпоративный спорт — делая одежду для команд «Газпрома», «Ростелекома» и других заказчиков, проект выручил 31 млн руб.]]></description>
+            <author>Ксения Мельникова, Илья Носырев</author>
+            <guid>5bfbab1c9a794773c519e54a</guid>
+            <pubDate>Tue, 27 Nov 2018 09:53:59 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/3/59/755432404733593.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Пуанты и подгузники: как заработать на обучении балету детей от двух лет]]></title>
+            <link>https://www.rbc.ru/own_business/26/11/2018/5bf7c6209a7947ac11cf3dfd</link>
+            <description><![CDATA[Супруги Корнеевы искали занятия для дочери, а обнаружили собственный бизнес]]></description>
+            <author>Светлана Романова, Илья Носырев</author>
+            <guid>5bf7c6209a7947ac11cf3dfd</guid>
+            <pubDate>Mon, 26 Nov 2018 06:31:07 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/4/04/755429864428044.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Герои РБК]]></title>
+            <link>https://www.rbc.ru/own_business/23/11/2018/5c0133559a7947868058a6e3</link>
+            <guid>5c0133559a7947868058a6e3</guid>
+            <pubDate>Fri, 23 Nov 2018 16:25:39 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/3/73/755435826123733.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Тот и съел: как iFood стал лидером доставки еды в Латинской Америке]]></title>
+            <link>https://www.rbc.ru/own_business/22/11/2018/5bf542d29a7947007a6c1d60</link>
+            <description><![CDATA[Директор крупнейшей латиноамериканской фудтех-компании рассказал РБК, на что потратит $500 млн инвестиций и почему компания не станет конкурировать с российскими сервисами доставки]]></description>
+            <author>Ксения Мельникова, Илья Носырев</author>
+            <guid>5bf542d29a7947007a6c1d60</guid>
+            <pubDate>Thu, 22 Nov 2018 09:38:43 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/9/61/755428121033619.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Только без рук: как изобретатель помогает заводам избавиться от людей]]></title>
+            <link>https://www.rbc.ru/own_business/20/11/2018/5bf172089a7947882dd38a99</link>
+            <description><![CDATA[Поработав с российскими предприятиями, основатель Aripix Robotics пришел в ужас от рассказов о том, как рабочие портят технику. Чтобы избавить клиентов от этого, он создал робот-манипулятор, который в три раза дешевле зарубежных]]></description>
+            <author>Светлана Романова, Илья Носырев</author>
+            <guid>5bf172089a7947882dd38a99</guid>
+            <pubDate>Tue, 20 Nov 2018 10:28:41 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/6/44/755426445275446.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Билет во все концы: зачем «Туту.ру» решилась на редизайн]]></title>
+            <link>https://www.rbc.ru/own_business/19/11/2018/5bed74369a7947378e90975a</link>
+            <description><![CDATA[Объединив многочисленные приложения в систему «одного окна», компания надеется привить россиянам новый подход к организации поездок. В то, что это станет конкурентным преимуществом, верят не все]]></description>
+            <author>Ксения Мельникова, Илья Носырев</author>
+            <guid>5bed74369a7947378e90975a</guid>
+            <pubDate>Mon, 19 Nov 2018 09:54:53 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/8/88/755423813972888.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Брошки на блокчейне: зачем «Мосгорломбарду» роботы и криптовалюты]]></title>
+            <link>https://www.rbc.ru/own_business/16/11/2018/5bd998a89a794700ce73d946</link>
+            <description><![CDATA[Купившая старую московскую сеть ломбардов компания KVP Group реформирует архаичный бизнес с помощью краудинвестинга и замены сотрудников-людей автоматами, которые сами оценивают, хранят и выдают золото клиентам]]></description>
+            <author>Мария Шакирова, Ксения Мельникова</author>
+            <guid>5bd998a89a794700ce73d946</guid>
+            <pubDate>Fri, 16 Nov 2018 09:00:08 +0300</pubDate>
+            <enclosure url="http://s0.rbk.ru/v6_top_pics/media/img/8/16/755422858366168.jpeg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Александр Шульгин — РБК: «Мы двигаем горы»]]></title>
+            <link>https://www.rbc.ru/business/02/11/2018/5bdb12259a79476626b5b32d</link>
+            <description><![CDATA[Основатель холдинга «Фамилия» и член экспертного совета Премии РБК (в 2017 году — в номинации «Визионер», в 2018-м — в номинации «Предприниматель») Александр Шульгин рассказал РБК о будущем бизнеса и бизнесе будущего]]></description>
+            <guid>5bdb12259a79476626b5b32d</guid>
+            <pubDate>Fri, 02 Nov 2018 09:18:22 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[С подиума в печь: как премиум-бренды избавляются от своей продукции]]></title>
+            <link>https://www.rbc.ru/society/07/09/2018/5b9296539a79474eb12b9d88</link>
+            <description><![CDATA[Некоторые производители одежды и аксессуаров премиум-класса ежегодно сжигают часть своей продукции. Почему компании избавляются от своих товаров — в видео РБК]]></description>
+            <author>Иван Вуколов, Анна Гнедкова</author>
+            <guid>5b9296539a79474eb12b9d88</guid>
+            <pubDate>Fri, 07 Sep 2018 18:35:59 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Чего лишится РПЦ из-за автокефалии УПЦ. Главное за 61 секунду]]></title>
+            <link>https://www.rbc.ru/politics/31/08/2018/5b88f8909a79472356a3bf95</link>
+            <description><![CDATA[Украинская православная церковь может получить независимость. Рассказываем, что это значит для РПЦ]]></description>
+            <author>Александр Атасунцев, Андрей Любимов, Дарья Барышникова, Александр Грачев, Анна Гнедкова</author>
+            <guid>5b88f8909a79472356a3bf95</guid>
+            <pubDate>Fri, 31 Aug 2018 11:30:21 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[«У них есть доллары, у нас есть наш Бог»: почему обвалилась турецкая лира]]></title>
+            <link>https://www.rbc.ru/money/13/08/2018/5b7196439a7947696ca5349e</link>
+            <description><![CDATA[10 августа курс турецкой лиры обрушился на 14%. Президент Эрдоган попросил граждан поддержать страну и продать свои доллары и золото. Как от санкций США рухнула национальная валюта Турции — в видео РБК]]></description>
+            <author>Анастасия Волосатова, Александр Грачев</author>
+            <guid>5b7196439a7947696ca5349e</guid>
+            <pubDate>Mon, 13 Aug 2018 17:59:54 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Предлагавшую несовершеннолетних для секс-услуг женщину задержали в Москве]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5b5b30ff9a7947195491ea26</link>
+            <guid>5b5b30ff9a7947195491ea26</guid>
+            <pubDate>Fri, 27 Jul 2018 17:53:41 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Как ЧМ-2018 стал самым прибыльным для ФИФА]]></title>
+            <link>https://www.rbc.ru/money/15/07/2018/5b48ce199a79477b7e77ebec</link>
+            <description><![CDATA[Благодаря ЧМ-2018 ФИФА получила рекордную для себя выручку — $6,1 млрд. Кто помог ей заработать и сколько Россия потратила на проведение мирового первенства — в видео РБК]]></description>
+            <author>Илья Городной, Денис Пузырев, Анна Гнедкова</author>
+            <guid>5b48ce199a79477b7e77ebec</guid>
+            <pubDate>Sun, 15 Jul 2018 09:58:19 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Верховная рада разрешила делать с валютой «все, что прямо не запрещено»]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5b2be9ed9a794742c8d3e015</link>
+            <guid>5b2be9ed9a794742c8d3e015</guid>
+            <pubDate>Thu, 21 Jun 2018 22:09:41 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Главный кадровик СКР рассказал о причинах своей отставки]]></title>
+            <link>https://www.rbc.ru/society/02/06/2018/5b1187fa9a7947f1093c51f3</link>
+            <description><![CDATA[Начальник управления кадров Следственного комитета России Виктор Долженко рассказал РБК о причинах своего ухода с занимаемой должности и опроверг его связь с отставкой главы московского СК Александра Дрыманова и «делом Шакро»]]></description>
+            <author>Максим Солопов</author>
+            <guid>5b1187fa9a7947f1093c51f3</guid>
+            <pubDate>Sat, 02 Jun 2018 08:03:57 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/4/27/755279130061274.jpg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Сколько стоят картины известных художников на аукционах]]></title>
+            <link>https://www.rbc.ru/money/15/05/2018/5afafd1b9a79473e739a6d7e</link>
+            <description><![CDATA[Одну из картин Амедео Модильяни продали на аукционе Sotheby's за $157 млн. Это рекордная сделка для аукционного дома. За сколько в разное время были проданы картины известных художников — в видеотесте РБК.]]></description>
+            <author>Иван Вуколов, Дарья Барышникова, Александр Грачев</author>
+            <guid>5afafd1b9a79473e739a6d7e</guid>
+            <pubDate>Tue, 15 May 2018 21:01:31 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[«МегаФон» и Газпромбанк объяснили цель участия в проекте «Ростеха» и USM]]></title>
+            <link>https://www.rbc.ru/money/08/05/2018/5af1543c9a7947638314012e</link>
+            <description><![CDATA[Газпромбанк и «МегаФон» подтвердили создание проекта в сфере цифровой экономики вместе с «Ростехом» и USM Holdings. Согласно сообщению компаний, оператор получит в новой структуре 45%, а банк — 35%]]></description>
+            <author>Маргарита Девяткина, Анна Балашова</author>
+            <guid>5af1543c9a7947638314012e</guid>
+            <pubDate>Tue, 08 May 2018 11:19:01 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/6/62/755257677467626.jpg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Дочка «Транснефти» заключила крупнейшую с начала года арендную сделку]]></title>
+            <link>https://www.rbc.ru/money/20/04/2018/5ad9ef2b9a794737287adadf</link>
+            <description><![CDATA[ЦСКА и «Транснефть — Технологии» договорились об аренде офисов на «ВЭБ Арене». Компания арендует около 12,7 тыс. кв. м помещений в комплексе. Консультанты сделки считают ее крупнейшей арендной транзакцией с начала текущего года]]></description>
+            <author>Маргарита Девяткина, Валерий Романов</author>
+            <guid>5ad9ef2b9a794737287adadf</guid>
+            <pubDate>Fri, 20 Apr 2018 17:37:46 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/9/40/755242355497409.jpg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Дорогой отдых: когда покупать доллары и евро в преддверии отпусков]]></title>
+            <link>https://www.rbc.ru/money/19/04/2018/5ad878f79a7947af353b96e5</link>
+            <description><![CDATA[Сезон отпусков близится, а это значит, что тем, кто уезжает за границу, предстоит задуматься о покупке валюты. Что лучше — сделать это сейчас или подождать? И сколько будут стоить доллар и евро к концу мая]]></description>
+            <author>Людмила Петухова</author>
+            <guid>5ad878f79a7947af353b96e5</guid>
+            <pubDate>Thu, 19 Apr 2018 19:17:57 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/3/54/755241540633543.jpg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Рубль или доллар: где искать более высокую доходность по вкладам]]></title>
+            <link>https://www.rbc.ru/money/15/04/2018/5ad09a529a794733c15fa039</link>
+            <description><![CDATA[Ставки по рублевым депозитам продолжают снижение, но из-за падения курса рубля этот процесс может затормозиться. О самых выгодных условиях по вкладам в рублях и о том, переходить ли из рублевых депозитов в валютные, — в обзоре РБК]]></description>
+            <author>Людмила Петухова, Галина Казакулова</author>
+            <guid>5ad09a529a794733c15fa039</guid>
+            <pubDate>Sun, 15 Apr 2018 09:50:33 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/3/03/755237753805033.jpg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Вексельберг не получит денег от продажи Sulzer до отмены санкций США]]></title>
+            <link>https://www.rbc.ru/money/12/04/2018/5acf31179a7947266d1bfbe1</link>
+            <description><![CDATA[Как стало известно РБК, «Ренова» Виктора Вексельберга не получит денег от продажи 14,59% швейцарской Sulzer до отмены санкций США. Цена этого пакета на бирже составляет $561 млн]]></description>
+            <author>Тимофей Дзядко</author>
+            <guid>5acf31179a7947266d1bfbe1</guid>
+            <pubDate>Thu, 12 Apr 2018 14:49:09 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/0/76/755235339697760.jpg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Доллар тянет вниз: какие активы стали самыми убыточными в первом квартале]]></title>
+            <link>https://www.rbc.ru/money/10/04/2018/5ac60e5b9a7947a02256bdd9</link>
+            <description><![CDATA[РБК оценил доходность вложений частных инвесторов в десять самых популярных инструментов. Какие активы оказались самыми прибыльными, а какие — самыми убыточными в первом квартале 2018 года]]></description>
+            <author>Людмила Петухова, Галина Казакулова</author>
+            <guid>5ac60e5b9a7947a02256bdd9</guid>
+            <pubDate>Tue, 10 Apr 2018 16:21:15 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/6/01/755233716033016.jpg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[Политика у руля: каким будет курс евро и доллара в апреле]]></title>
+            <link>https://www.rbc.ru/money/03/04/2018/5ac34f9b9a7947ea3737b863</link>
+            <description><![CDATA[Курс рубля в апреле определят динамика нефтяного рынка и геополитика. Торговая война между Китаем и США, а также санкции против России из-за «дела Скрипаля» могут негативно повлиять на российскую валюту, считают эксперты]]></description>
+            <author>Людмила Петухова</author>
+            <guid>5ac34f9b9a7947ea3737b863</guid>
+            <pubDate>Tue, 03 Apr 2018 19:06:37 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/6/62/755227647840626.jpg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[В Волоколамске активисты покинули штаб по решению проблемы «Ядрово»]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5ac27a439a79472c850a4d3f</link>
+            <guid>5ac27a439a79472c850a4d3f</guid>
+            <pubDate>Mon, 02 Apr 2018 21:58:42 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Весеннее стояние: как изменилась доходность валютных вкладов в марте]]></title>
+            <link>https://www.rbc.ru/money/23/03/2018/5ab4bac09a7947db7bfc5c30</link>
+            <description><![CDATA[Ставки по валютным вкладам в большинстве банков не изменились. Повышение или понижение ставок отдельными игроками зависит не от рыночных тенденций, а от потребностей конкретного банка, говорят эксперты]]></description>
+            <author>Людмила Петухова, Галина Казакулова</author>
+            <guid>5ab4bac09a7947db7bfc5c30</guid>
+            <pubDate>Fri, 23 Mar 2018 16:45:10 +0300</pubDate>
+            <enclosure url="https://s0.rbk.ru/v6_top_pics/media/img/3/89/755218132388893.jpg"
+                       type="image/jpeg"
+                       length=""/>
+        </item>
+        <item>
+            <title><![CDATA[В Таиланде в обращение войдут банкноты с новым королем Рамой X]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5ab4c7199a7947e2cf33b6eb</link>
+            <guid>5ab4c7199a7947e2cf33b6eb</guid>
+            <pubDate>Fri, 23 Mar 2018 14:23:44 +0300</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[ФАС анонсировала дела против московских аэропортов из-за такси]]></title>
+            <link>https://www.rbc.ru/rbcfreenews/5aaa87529a7947c6e52199a3</link>
+            <guid>5aaa87529a7947c6e52199a3</guid>
+            <pubDate>Thu, 15 Mar 2018 17:58:10 +0300</pubDate>
+        </item>
+    </channel>
+</rss>

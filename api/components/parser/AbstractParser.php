@@ -3,6 +3,9 @@
 namespace app\components\parser;
 
 
+use app\components\parser\helpers\Candidates;
+use app\components\parser\helpers\Common;
+use app\components\parser\helpers\Factory;
 use app\models\Company;
 use app\models\News;
 use app\models\NewsPhoto;
@@ -26,29 +29,6 @@ abstract class AbstractParser
     const ARTICLE_SELECTOR = '.article__text';
     const RSS_IMAGE_SELECTOR = null;
 
-    private function getCandidates()
-    {
-        //$cols = preg_filter('/^name.*/', '$0', array_keys((new Company())->attributes));
-        $companies = Company::find()->select(['id', 'parser_variations'])->asArray()->all();
-
-        $companies = array_map(function ($item) {
-            $id = $item['id'];
-            unset($item['id']);
-
-            $variations = array_filter(explode(Company::VARIATIONS_SEPARATOR, $item['parser_variations']));
-            if (count($variations) < 1)
-                return false;
-
-            return [
-                'id' => $id,
-                'preg_condition' => '/[\W]+(' . implode('|', array_map(function ($str) {
-                        return preg_quote(mb_strtolower(trim($str)), '/');
-                    }, $variations)) . ')[\W]+/i'
-            ];
-        }, $companies);
-
-        return array_filter($companies);
-    }
 
     private function isAlreadyParsed($link)
     {
@@ -60,14 +40,16 @@ abstract class AbstractParser
 
     private function buildMeta(Crawler $node)
     {
+        $title = trim($node->filter(static::TITLE_SELECTOR)->eq(0)->text());
+        $pub_date = $node->filter(static::DATE_SELECTOR)->eq(0)->text();
+        $link = trim($node->filter(static::LINK_SELECTOR)->eq(0)->text());
+
         return [
-            'title' => trim($node->filter(static::TITLE_SELECTOR)->eq(0)->text()),
-            'pubDate' => (new \DateTime(
-                $node->filter(static::DATE_SELECTOR)->eq(0)->text(),
-                new \DateTimeZone(static::TIMEZONE)))
-                ->format('y-m-d H:i:s'),
-            'link' => trim($node->filter(static::LINK_SELECTOR)->eq(0)->text()),
-            'image_url' => $this->fetchImage($node)
+            'title' => $title,
+            'pubDate' => Common::mysqlDate($pub_date, static::TIMEZONE),
+            'link' => $link,
+            'image_url' => $this->fetchImage($node),
+            'companies' => [],
         ];
     }
 
@@ -80,106 +62,60 @@ abstract class AbstractParser
 
     public function run()
     {
-        $this->fetch(static::URL)
-            ->filter(static::ITEM_SELECTOR)
-            ->each(function (Crawler $node) {
-                $companies = $this->getCandidates();
-                $meta = $this->buildMeta($node);
-                Console::stdout('Статья: ' . $meta['title'] . '... ' . PHP_EOL);
-                foreach ($companies as $company) {
+        $this->fetch(static::URL)->filter(static::ITEM_SELECTOR)->each(function (Crawler $node) {
+            $meta = $this->buildMeta($node);
 
-                    if (preg_match($company['preg_condition'], $node->text())) {
-                        $meta['companies'][] = $company;
-                        Console::stdout(' [!] Найдена компания #' . $company['id'] . PHP_EOL);
-                    }
-                };
+            Console::stdout('Статья: ' . $meta['title'] . '... ' . PHP_EOL);
 
-                if ($this->isAlreadyParsed($meta['link'])) {
-                    Console::stdout(' [-] Уже собирали!' . PHP_EOL);
-                    return;
-                }
-                if (!isset($meta['companies']) || !count($meta['companies'])) {
-                    Console::stdout(' [+] Добавляем без компании' . PHP_EOL);
-                    //return;
-                } else {
-                    Console::stdout(' [+] Совпало ' . count($meta['companies']) . ' компаний' . PHP_EOL);
-                    //return;
-                }
+            if ($this->isAlreadyParsed($meta['link'])) {
+                Console::stdout(' [-] Уже собирали!' . PHP_EOL);
+                return;
+            }
+
+            $haystack = Common::purify($node->text());
+
+            $meta['companies'] = Candidates::matches($haystack);
+
+            if (!count($meta['companies'])) {
+                Console::stdout(' [+] Добавляем без компании' . PHP_EOL);
+            } else {
+                Console::stdout(' [+] Совпало ' . count($meta['companies']) . ' компаний' . PHP_EOL);
+            }
+
+            Console::stdout('[+]' . $meta['link'] . PHP_EOL);
+
+            $article_full = $this->fetch($meta['link'])->filter(static::ARTICLE_SELECTOR)->eq(0)->text();
+
+            $meta['text'] = Common::purify($article_full);
+
+            $transaction = \Yii::$app->db->beginTransaction();
+
+            try {
+                $is_publish = (int)(count($meta['companies']) > 0);
+
+                $model = Factory::saveNews($meta['title'], $this->prepareText($meta['text']), $is_publish);
+
+                Factory::linkCompanies($model, $meta['companies']);
 
 
-                Console::stdout('[+]' . $meta['link'] . PHP_EOL);
-
-                $meta['text'] = trim(preg_replace(
-                    '/(\s|\n|\t|\r){2,}/',
-                    '$1',
-                    $this->fetch($meta['link'])
-                        ->filter(static::ARTICLE_SELECTOR)
-                        ->eq(0)
-                        ->text()));
-
-                $transaction = \Yii::$app->db->beginTransaction();
-
-                try {
-                    $model = new News([
-                        'title' => $meta['title'],
-                        'text' => $this->prepareText($meta['text']),
-                        'publish' => (int)((isset($meta['companies']) && count($meta['companies']) > 0)),
-                        'date' => (new \DateTime())->format('Y-m-d H:i:s'),
-                    ]);
-                    if (!$model->save()) {
-                        throw new ServerErrorHttpException('Can\'t save model', 1);
-                    }
-                    if (isset($meta['companies'])) {
-                        foreach ($meta['companies'] as $company) {
-                            \Yii::$app->db->createCommand()->insert('{{%news_companies}}', [
-                                'news_id' => $model->id,
-                                'company_id' => $company['id'],
-                            ])->execute();
-                        }
-                    }
-                    if ($image_url = ArrayHelper::getValue($meta, 'image_url')) {
-                        $this->attachImage($image_url, $model->id);
-                    }
-                    $model = new ParserJobs([
-                        'source_url' => $meta['link'],
-                        'article_id' => $model->id,
-                        'post_time' => $meta['pubDate'],
-                    ]);
-
-                    if (!$model->save()) {
-                        throw new ServerErrorHttpException('Can\'t save model', 1);
-                    }
-                } catch (\Throwable $exception) {
-                    $transaction->rollBack();
-                    throw $exception;
+                if ($image_url = ArrayHelper::getValue($meta, 'image_url')) {
+                    Factory::attachImage($model, $image_url);
                 }
 
-                $transaction->commit();
-            });
+                Factory::registerJobDone($model, $meta['link'], $meta['pubDate']);
+
+            } catch (\Throwable $exception) {
+                $transaction->rollBack();
+                throw $exception;
+            }
+
+            $transaction->commit();
+        });
     }
 
     public function fetchImage(Crawler $node)
     {
         return null;
-    }
-
-
-    public function attachImage($url, $news_id)
-    {
-        $m = new NewsPhoto();
-        $m->news_id = $news_id;
-        $m->file = md5($url) . '.' . pathinfo($url, PATHINFO_EXTENSION);
-
-        FileHelper::createDirectory(dirname($m->resolvePath($m->filePath)));
-        file_put_contents(
-            $m->resolvePath($m->filePath),
-            file_get_contents($url)
-        );
-
-        if ($m->save()) {
-            $m->createThumbs();
-        }
-
     }
 
 }
