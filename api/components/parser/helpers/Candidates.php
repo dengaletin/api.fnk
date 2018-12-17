@@ -8,7 +8,7 @@ use app\models\Company;
 class Candidates
 {
 
-    const TEMPLATE = '/[\W]+(%s)[\W]+/i';
+    const TEMPLATE = '/[«"\\\'\s]+(%s)[»"\\\'\s]+/i';
 
     public static function get()
     {
@@ -52,8 +52,9 @@ class Candidates
         }
 
         $result = array_map(function($str){
-            $str = mb_strtolower(trim($str));
+            $str = mb_strtolower($str);
             $str = preg_quote($str);
+            $str = trim($str);
 
             return $str;
         }, $result);

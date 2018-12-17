@@ -6,16 +6,9 @@ namespace app\components\parser;
 use app\components\parser\helpers\Candidates;
 use app\components\parser\helpers\Common;
 use app\components\parser\helpers\Factory;
-use app\models\Company;
-use app\models\News;
-use app\models\NewsPhoto;
-use app\models\ParserJobs;
 use Symfony\Component\DomCrawler\Crawler;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Console;
-use yii\helpers\FileHelper;
-use yii\helpers\VarDumper;
-use yii\web\ServerErrorHttpException;
 
 abstract class AbstractParser
 {
@@ -53,6 +46,20 @@ abstract class AbstractParser
         ];
     }
 
+    public function prepareContext()
+    {
+        $options = [
+            'http' => [
+                'method' => "GET",
+                'header' => "Accept-language: en\r\n" .
+                            "Cookie: y_maps=test\r\n" .
+                            "User-Agent: Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.102011-10-16 20:23:10\r\n"
+            ],
+        ];
+
+        return stream_context_create($options);
+    }
+
     abstract function fetch($url);
 
     protected function prepareText($text)
@@ -72,7 +79,7 @@ abstract class AbstractParser
                 return;
             }
 
-            $haystack = Common::purify($node->text());
+            $haystack = mb_strtolower(Common::purify($node->text()));
 
             $meta['companies'] = Candidates::matches($haystack);
 
