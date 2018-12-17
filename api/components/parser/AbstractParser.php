@@ -69,55 +69,70 @@ abstract class AbstractParser
 
     public function run()
     {
-        $this->fetch(static::URL)->filter(static::ITEM_SELECTOR)->each(function (Crawler $node) {
-            $meta = $this->buildMeta($node);
+        try
+        {
+            $this->fetch(static::URL)->filter(static::ITEM_SELECTOR)->each(function(Crawler $node) {
+                $meta = $this->buildMeta($node);
 
-            Console::stdout('Статья: ' . $meta['title'] . '... ' . PHP_EOL);
+                Console::stdout('Статья: ' . $meta['title'] . '... ' . PHP_EOL);
 
-            if ($this->isAlreadyParsed($meta['link'])) {
-                Console::stdout(' [-] Уже собирали!' . PHP_EOL);
-                return;
-            }
+                if ($this->isAlreadyParsed($meta['link']))
+                {
+                    Console::stdout(' [-] Уже собирали!' . PHP_EOL);
 
-            $haystack = mb_strtolower(Common::purify($node->text()));
-
-            $meta['companies'] = Candidates::matches($haystack);
-
-            if (!count($meta['companies'])) {
-                Console::stdout(' [+] Добавляем без компании' . PHP_EOL);
-            } else {
-                Console::stdout(' [+] Совпало ' . count($meta['companies']) . ' компаний' . PHP_EOL);
-            }
-
-            Console::stdout('[+]' . $meta['link'] . PHP_EOL);
-
-            $article_full = $this->fetch($meta['link'])->filter(static::ARTICLE_SELECTOR)->eq(0)->text();
-
-            $meta['text'] = Common::purify($article_full);
-
-            $transaction = \Yii::$app->db->beginTransaction();
-
-            try {
-                $is_publish = (int)(count($meta['companies']) > 0);
-
-                $model = Factory::saveNews($meta['title'], $this->prepareText($meta['text']), $is_publish);
-
-                Factory::linkCompanies($model, $meta['companies']);
-
-
-                if ($image_url = ArrayHelper::getValue($meta, 'image_url')) {
-                    Factory::attachImage($model, $image_url);
+                    return;
                 }
 
-                Factory::registerJobDone($model, $meta['link'], $meta['pubDate']);
+                $haystack = mb_strtolower(Common::purify($node->text()));
 
-            } catch (\Throwable $exception) {
-                $transaction->rollBack();
-                throw $exception;
-            }
+                $meta['companies'] = Candidates::matches($haystack);
 
-            $transaction->commit();
-        });
+                if (!count($meta['companies']))
+                {
+                    Console::stdout(' [+] Добавляем без компании' . PHP_EOL);
+                }
+                else
+                {
+                    Console::stdout(' [+] Совпало ' . count($meta['companies']) . ' компаний' . PHP_EOL);
+                }
+
+                Console::stdout('[+]' . $meta['link'] . PHP_EOL);
+
+                $article_full = $this->fetch($meta['link'])->filter(static::ARTICLE_SELECTOR)->eq(0)->text();
+
+                $meta['text'] = Common::purify($article_full);
+
+                $transaction = \Yii::$app->db->beginTransaction();
+
+                try
+                {
+                    $is_publish = (int)(count($meta['companies']) > 0);
+
+                    $model = Factory::saveNews($meta['title'], $this->prepareText($meta['text']), $is_publish);
+
+                    Factory::linkCompanies($model, $meta['companies']);
+
+
+                    if ($image_url = ArrayHelper::getValue($meta, 'image_url'))
+                    {
+                        Factory::attachImage($model, $image_url);
+                    }
+
+                    Factory::registerJobDone($model, $meta['link'], $meta['pubDate']);
+
+                }
+                catch (\Throwable $exception)
+                {
+                    $transaction->rollBack();
+                    throw $exception;
+                }
+
+                $transaction->commit();
+            });
+        } catch (\Throwable $exception)
+        {
+            Console::output('[<====================== ERROR! ===================>]');
+        }
     }
 
     public function fetchImage(Crawler $node)
