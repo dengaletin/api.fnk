@@ -36,7 +36,7 @@ class Candidates
         $result = [];
 
         foreach ($candidates as $candidate) {
-            if (preg_match($candidate['preg_condition'], $text)) {
+            if (preg_match(mb_strtolower($candidate['preg_condition']), mb_strtolower($text))) {
                $result[] = $candidate['id'];
             }
         }

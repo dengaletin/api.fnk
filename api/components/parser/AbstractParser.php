@@ -83,7 +83,7 @@ abstract class AbstractParser
                     return;
                 }
 
-                $haystack = mb_strtolower(Common::purify($node->text()));
+                $haystack = Common::purify($node->text());
 
                 $meta['companies'] = Candidates::matches($haystack);
 
