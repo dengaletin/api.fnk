@@ -118,6 +118,15 @@ abstract class AbstractParser
                         Factory::attachImage($model, $image_url);
                     }
 
+                    if (!$image_url && $meta['companies'])
+                    {
+                        if ($images = Candidates::getImagePlaceholders($meta['companies']))
+                        {
+                            $image_url = $images[array_rand($images)];
+                            Factory::attachImage($model, $image_url);
+                        }
+                    }
+
                     Factory::registerJobDone($model, $meta['link'], $meta['pubDate']);
 
                 }

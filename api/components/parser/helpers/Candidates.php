@@ -4,6 +4,7 @@ namespace app\components\parser\helpers;
 
 
 use app\models\Company;
+use app\models\CompanyPhoto;
 
 class Candidates
 {
@@ -63,6 +64,21 @@ class Candidates
 
         $result = sprintf(self::TEMPLATE, $result);
 
+        return $result;
+    }
+
+    public static function getImagePlaceholders(array $ids)
+    {
+        $companies = Company::findAll($ids);
+        $result = [];
+        foreach ($companies as $company)
+        {
+           foreach ($company->photos as $photo)
+           {
+               /** @var CompanyPhoto $photo */
+               $result[] = $photo->getUploadedFilePath('file');
+           }
+        }
         return $result;
     }
 }
