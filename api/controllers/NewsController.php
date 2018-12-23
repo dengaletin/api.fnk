@@ -7,6 +7,7 @@ use app\models\NewsPhoto;
 use app\models\NewsPhotoForm;
 use app\models\News;
 use app\models\search\NewsSearch;
+use yii\helpers\Url;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -50,6 +51,8 @@ class NewsController extends Controller
     {
         $searchModel = new NewsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        Url::remember(Url::current(), 'news-index');
+
 
         return $this->render('index', [
             'searchModel' => $searchModel,
@@ -131,7 +134,7 @@ class NewsController extends Controller
     {
         $this->findModel($id)->delete();
 
-        return $this->redirect(['index']);
+        return $this->redirect(Url::previous('news-index') ?? ['index']);
     }
 
     /**
