@@ -2,16 +2,15 @@
 
 namespace app\controllers;
 
-use Yii;
-use app\models\NewsPhoto;
-use app\models\NewsPhotoForm;
 use app\models\News;
+use app\models\NewsPhotoForm;
 use app\models\search\NewsSearch;
+use Yii;
+use yii\filters\AccessControl;
+use yii\filters\VerbFilter;
 use yii\helpers\Url;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
-use yii\filters\AccessControl;
 use yii\web\UploadedFile;
 
 /**
@@ -62,8 +61,11 @@ class NewsController extends Controller
 
     /**
      * Displays a single News model.
+     *
      * @param integer $id
+     *
      * @return mixed
+     * @throws NotFoundHttpException
      */
     public function actionView($id)
     {
@@ -127,8 +129,12 @@ class NewsController extends Controller
     /**
      * Deletes an existing News model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
+     *
      * @param integer $id
+     *
      * @return mixed
+     * @throws NotFoundHttpException
+     * @throws \yii\db\StaleObjectException
      */
     public function actionDelete($id)
     {

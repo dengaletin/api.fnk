@@ -2,9 +2,9 @@
 
 use app\models\News;
 use yii\grid\GridView;
-use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\helpers\StringHelper;
+use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\search\NewsSearch */
@@ -33,6 +33,11 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'filterSelector' => 'select[name="per-page"]',
+        'rowOptions' => function($model, $key, $index, GridView $grid) {
+            return [
+                'id' => 'row_' . $index,
+            ];
+        },
         'columns' => [
             'id',
             'source.post_time',
@@ -73,7 +78,16 @@ $this->params['breadcrumbs'][] = $this->title;
                 'format' => 'raw',
             ],
             'publish:boolean',
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'urlCreator' => function($action, News $model, $key, $index) {
+                    return Url::toRoute([
+                        'delete',
+                        'id' => $model->id,
+                        '#' => 'row_' . $index,
+                    ]);
+                },
+            ],
         ],
     ]); ?>
 
