@@ -82,7 +82,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'class' => 'yii\grid\ActionColumn',
                 'urlCreator' => function($action, News $model, $key, $index) {
                     return Url::toRoute([
-                        'delete',
+                        $action,
                         'id' => $model->id,
                         '#' => 'row_' . $index,
                     ]);
