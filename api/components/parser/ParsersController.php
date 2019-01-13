@@ -32,7 +32,7 @@ class ParsersController extends Controller
     public function actionAll()
     {
         // Todo: Cron
-        $actions = ['rbc', 'interfax', 'finam'];
+        $actions = ['rbc', 'interfax'];
         //\Yii::$app->db->charset = 'utf8mb4'; // Todo: Внести в Dockerfile
         foreach ($actions as $action) {
             $this->runAction($action);
