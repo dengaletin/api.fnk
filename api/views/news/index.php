@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'filterSelector' => 'select[name="per-page"]',
-        'rowOptions' => function($model, $key, $index, GridView $grid) {
+        'rowOptions' => function ($model, $key, $index, GridView $grid) {
             return [
                 'id' => 'row_' . $index,
             ];
@@ -76,8 +76,12 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'logo',
                 'value' => function (News $data) {
                     if ($data->photos) {
-                        $value = Html::img($data->photos[0]->getThumbFileUrl('file'),
-                            ['width' => 50, 'height' => 50, 'style' => 'border: 1px solid #ccc']);
+                        $value =
+                            Html::img($data->photos[0]->getThumbFileUrl('file'),
+                                ['width' => 50, 'height' => 50, 'style' => 'border: 1px solid #ccc']) .
+                            Html::a('<span class="glyphicon glyphicon-pencil"></span> Edit',
+                                ['/news-photos/update', 'id' => $data->photos[0]->id],
+                                ['target' => '_blank']);;
                     } else {
                         $value = null;
                     }
@@ -98,7 +102,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
             [
                 'class' => 'yii\grid\ActionColumn',
-                'urlCreator' => function($action, News $model, $key, $index) {
+                'urlCreator' => function ($action, News $model, $key, $index) {
                     return Url::toRoute([
                         $action,
                         'id' => $model->id,
