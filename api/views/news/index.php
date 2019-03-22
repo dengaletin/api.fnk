@@ -45,6 +45,9 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'source.source_host',
                 'value' => function (News $model) {
+                    if ($model->source->source_host == 'feeds.reuters.com') {
+                        $model->source->source_host = preg_replace("~feeds.~", '', $model->source->source_host);
+                    }
                     return Html::a(Html::encode($model->source->source_host),
                         $model->source->source_url,
                         ['target' => '_blank']);
