@@ -52,11 +52,34 @@ class NewsController extends Controller
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         Url::remember(Url::current(), 'news-index');
 
-
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
+    }
+
+    public function actionAjax()
+    {
+        if (Yii::$app->request->isAjax) {
+            $publish = Yii::$app->request->post('checked');
+            $id = Yii::$app->request->post('id');
+
+            $model = $this->findModel($id);
+
+            if ($publish == '0') {
+                $msg = 'Publication - ' . $model->title . ' status is inactive';
+            } elseif ($publish == '1') {
+                $msg = 'Publication - ' . $model->title . ' status is active';
+            }
+
+            $model->publish = $publish;
+
+            if (!$model->save()) {
+                $msg = 'Saving error';
+            }
+
+            return $msg;
+        }
     }
 
     /**

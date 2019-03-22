@@ -75,12 +75,27 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'logo',
                 'value' => function (News $data) {
-                    return $data->photos ? Html::img($data->photos[0]->getThumbFileUrl('file'),
-                        ['width' => 50, 'height' => 50, 'style' => 'border: 1px solid #ccc']) : '';
+                    if ($data->photos) {
+                        $value = Html::img($data->photos[0]->getThumbFileUrl('file'),
+                            ['width' => 50, 'height' => 50, 'style' => 'border: 1px solid #ccc']);
+                    } else {
+                        $value = null;
+                    }
+                    return $value;
                 },
                 'format' => 'raw',
             ],
-            'publish:boolean',
+            [
+                'attribute' => 'publish',
+                'filter' => [
+                    1 => 'Да',
+                    0 => 'Нет',
+                ],
+                'value' => function ($model) {
+                    return $this->render('_form_publish', ['model' => $model]);
+                },
+                'format' => 'raw',
+            ],
             [
                 'class' => 'yii\grid\ActionColumn',
                 'urlCreator' => function($action, News $model, $key, $index) {
