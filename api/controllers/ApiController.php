@@ -61,11 +61,19 @@ class ApiController extends Controller
             ],
             'authenticator' => [
                 'class' => DeviceAuth::className(),
-                'except' => [ 'auth', 'subscribe' ],
+                'except' => ['auth', 'subscribe'],
             ],
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => [/*'subscribe',*/ 'unsubscribe', 'remove-device', 'purchase', 'profile', 'setup-profile', 'setup-phone', 'setup-phone-confirm'],
+                'only' => [/*'subscribe',*/
+                    'unsubscribe',
+                    'remove-device',
+                    'purchase',
+                    'profile',
+                    'setup-profile',
+                    'setup-phone',
+                    'setup-phone-confirm'
+                ],
                 'rules' => [
                     [
                         'allow' => true,
@@ -139,7 +147,7 @@ class ApiController extends Controller
             $forphone = $data;
         }
 
-        $my_device = Device::find()->select(['access_token'])->where([ 'id' => $forphone['device_id'] ])->one();
+        $my_device = Device::find()->select(['access_token'])->where(['id' => $forphone['device_id']])->one();
 
         $result = [
             'lang' => null !== $device ? $device->language : null,
@@ -212,7 +220,7 @@ class ApiController extends Controller
 
     public function actionCompanyid($comp_id)
     {
-       $query = Company::find()->with(['mode', 'group'])->where(['id' => $comp_id])->orderBy(['id' => SORT_ASC]);
+        $query = Company::find()->with(['mode', 'group'])->where(['id' => $comp_id])->orderBy(['id' => SORT_ASC]);
 
         return $query->all();
     }
@@ -318,7 +326,8 @@ class ApiController extends Controller
     public function actionCompanyChatPushOff($profile_id, $company_id)
     {
         try {
-            Yii::$app->db->createCommand()->delete('msfo_push_subscription', "profile_id = {$profile_id} AND company_id = {$company_id}")->execute();
+            Yii::$app->db->createCommand()->delete('msfo_push_subscription',
+                "profile_id = {$profile_id} AND company_id = {$company_id}")->execute();
 
             //return true;
         } catch (\Exception $e) {
@@ -359,8 +368,8 @@ class ApiController extends Controller
             $message = $message->getMessage()->one();
 
             $messages[] = [
-                'id'        => $message->id,
-                'message'   => $message->message
+                'id' => $message->id,
+                'message' => $message->message
             ];
         }
 
@@ -408,11 +417,11 @@ class ApiController extends Controller
 
         foreach ($subscriptions as $company_id => $data) {
             $res = Yii::$app->db->createCommand()->insert('msfo_message', [
-                'created_at'    => time(),
-                'message'       => "Новые сообщения в чате компании \"{$data['name']}\".",
-                'target'        => 'all',
-                'language'      => 'RU',
-                'type'          => 1
+                'created_at' => time(),
+                'message' => "Новые сообщения в чате компании \"{$data['name']}\".",
+                'target' => 'all',
+                'language' => 'RU',
+                'type' => 1
             ])->execute();
 
             if ($res) {
@@ -420,14 +429,15 @@ class ApiController extends Controller
 
                 foreach ($data['profiles'] as $profile_id => $profile) {
                     $res = Yii::$app->db->createCommand()->insert('msfo_message_queue', [
-                        'message_id'    => $message_id,
-                        'device_id'     => $profile['device_id'],
-                        'type'          => 1
+                        'message_id' => $message_id,
+                        'device_id' => $profile['device_id'],
+                        'type' => 1
                     ])->execute();
                 }
             }
 
-            Yii::$app->db->createCommand()->delete('msfo_new_company_chat_message', "company_id = {$company_id}")->execute();
+            Yii::$app->db->createCommand()->delete('msfo_new_company_chat_message',
+                "company_id = {$company_id}")->execute();
         }
 
         //print_r($subscriptions);
@@ -508,16 +518,16 @@ class ApiController extends Controller
 //                    'access_token'  => $device->access_token
 //                ];
 
-                 $profile = Profile::find()->where(['id' => $phones[$phone]])->one();
-                 $device_id = $profile->device_id;
+                $profile = Profile::find()->where(['id' => $phones[$phone]])->one();
+                $device_id = $profile->device_id;
 
-                 $device = Device::find()->where(['id' => $device_id])->one();
+                $device = Device::find()->where(['id' => $device_id])->one();
 
-                 $res = [
-                     'device_id'     => $device_id,
-                     'device_token'  => $device->device_token,
-                     'access_token'  => $device->access_token
-                 ];
+                $res = [
+                    'device_id' => $device_id,
+                    'device_token' => $device->device_token,
+                    'access_token' => $device->access_token
+                ];
                 break;
 
             default:
@@ -627,10 +637,10 @@ class ApiController extends Controller
                     //
 
                     if (
-                        $res = move_uploaded_file(
-                            $_FILES['photo_file']['tmp_name'],
-                            __DIR__."/../web/upload/chat/{$filename}"
-                        )
+                    $res = move_uploaded_file(
+                        $_FILES['photo_file']['tmp_name'],
+                        __DIR__ . "/../web/upload/chat/{$filename}"
+                    )
                     ) {
                         Yii::$app->db->createCommand()->update(
                             'msfo_chat_file',
@@ -679,7 +689,6 @@ class ApiController extends Controller
     }
 
 
-
     public function actionCompanyWithValues($year = null)
     {
         // $query = 'SELECT * FROM (SELECT * FROM `msfo_company` LEFT JOIN `msfo_company_value` ON msfo_company.id = msfo_company_value.company_id WHERE msfo_company_value.year <= 2017 ORDER BY msfo_company_value.year DESC) msfo_company GROUP BY msfo_company.id';
@@ -687,9 +696,9 @@ class ApiController extends Controller
         // $query = 'SELECT * FROM `msfo_company` LEFT JOIN `msfo_company_value` ON msfo_company.id = msfo_company_value.company_id WHERE msfo_company_value.year ='.$year;
 
         if (!$this->isPurchase()) {
-            $query = 'SELECT * FROM (SELECT * FROM `msfo_company` LEFT JOIN `msfo_company_value` ON msfo_company.id = msfo_company_value.company_id WHERE msfo_company.free = 1 AND msfo_company_value.year <= '.$year.' ORDER BY msfo_company_value.year DESC) msfo_company GROUP BY msfo_company.id';
+            $query = 'SELECT * FROM (SELECT * FROM `msfo_company` LEFT JOIN `msfo_company_value` ON msfo_company.id = msfo_company_value.company_id WHERE msfo_company.free = 1 AND msfo_company_value.year <= ' . $year . ' ORDER BY msfo_company_value.year DESC) msfo_company GROUP BY msfo_company.id';
         } else {
-            $query = 'SELECT * FROM (SELECT * FROM `msfo_company` LEFT JOIN `msfo_company_value` ON msfo_company.id = msfo_company_value.company_id WHERE msfo_company_value.year <= '.$year.' ORDER BY msfo_company_value.year DESC) msfo_company GROUP BY msfo_company.id';
+            $query = 'SELECT * FROM (SELECT * FROM `msfo_company` LEFT JOIN `msfo_company_value` ON msfo_company.id = msfo_company_value.company_id WHERE msfo_company_value.year <= ' . $year . ' ORDER BY msfo_company_value.year DESC) msfo_company GROUP BY msfo_company.id';
         }
         $result = Yii::$app->db->createCommand($query)->queryAll();
         return $result;
@@ -704,13 +713,19 @@ class ApiController extends Controller
             $query->free();
         }
 
-        $result = [ ];
-        foreach($query->all() as $value) {
+        $result = [];
+        foreach ($query->all() as $value) {
             $result[] = $value->getRaw();
         }
 
         foreach ($result as $obj) {
             foreach ($obj as $prop => &$val) {
+                if ($val === 0) {
+                    $val = null;
+                }
+//                if (($prop == 35 and $val === 0)) {
+//                    $val = null;
+//                }
                 if ($prop >= 36 and ('' == trim($val) or null === $val)) {
                     $val = 'n/a';
                 }
@@ -786,7 +801,7 @@ class ApiController extends Controller
 
         $file_path = null;
 
-        if(!$full) {
+        if (!$full) {
             $model->createThumbs();
 
             $file_path = $model->getThumbFilePath('file', 'thumb');
@@ -822,10 +837,11 @@ class ApiController extends Controller
 
         Yii::$app->response->getHeaders()->set('X-User-Token', $device->access_token);
 
-                 return $device->access_token;
+        return $device->access_token;
     }
 
-    public function actionSetupProfile() {
+    public function actionSetupProfile()
+    {
 
         /* application/x-www-form-urlencoded */
 
@@ -844,11 +860,11 @@ class ApiController extends Controller
             $nickname = "{$firstName}_{$lastName}";
         }
 
-        if(!$device = $this->loadDevice()) {
+        if (!$device = $this->loadDevice()) {
             throw new NotFoundHttpException("Device not found");
         }
 
-        if(!$profile = $device->getProfile()->one()) { // $device->getProfile()
+        if (!$profile = $device->getProfile()->one()) { // $device->getProfile()
             throw new NotFoundHttpException("Profile not found");
         }
 
@@ -861,16 +877,16 @@ class ApiController extends Controller
             and
             !$nickname
         ) {
-            $firstName  = '0000';
-            $lastName   = '0000';
-            $email      = '0000';
-            $nickname   = '0000';
+            $firstName = '0000';
+            $lastName = '0000';
+            $email = '0000';
+            $nickname = '0000';
         }
 
-        $profile->first_name    = $firstName;
-        $profile->last_name     = $lastName;
-        $profile->email         = $email;
-        $profile->nickname      = $nickname;
+        $profile->first_name = $firstName;
+        $profile->last_name = $lastName;
+        $profile->email = $email;
+        $profile->nickname = $nickname;
 
         if (!empty($_FILES)) {
 
@@ -906,15 +922,15 @@ class ApiController extends Controller
                 $filename = "avatar.{$f_ext}";
 
                 //
-                if (!file_exists(__DIR__."/../web/upload/avatar/profile-{$profile->id}")) {
-                    mkdir(__DIR__."/../web/upload/avatar/profile-{$profile->id}");
+                if (!file_exists(__DIR__ . "/../web/upload/avatar/profile-{$profile->id}")) {
+                    mkdir(__DIR__ . "/../web/upload/avatar/profile-{$profile->id}");
                 }
 
                 if (
-                    $res = move_uploaded_file(
-                        $_FILES['ava']['tmp_name'],
-                        __DIR__."/../web/upload/avatar/profile-{$profile->id}/{$filename}"
-                    )
+                $res = move_uploaded_file(
+                    $_FILES['ava']['tmp_name'],
+                    __DIR__ . "/../web/upload/avatar/profile-{$profile->id}/{$filename}"
+                )
                 ) {
                     Yii::$app->db->createCommand()->update(
                         'msfo_profile',
@@ -938,11 +954,11 @@ class ApiController extends Controller
 
     public function actionSetupPhone()
     {
-        if(!$device = $this->loadDevice()) {
+        if (!$device = $this->loadDevice()) {
             throw new NotFoundHttpException("Device not found");
         }
 
-        if(!$device->id) {
+        if (!$device->id) {
             if (!(Yii::$app->request->post('device_id'))) {
                 throw new NotFoundHttpException("Device not registered");
             }
@@ -982,7 +998,7 @@ class ApiController extends Controller
             throw new BadRequestHttpException('Invalid confirm code param');
         }
 
-        if (!$reg_request = RegistrationRequest::find()->where(['confirm_code' => $code ])->limit(1)->one()) {
+        if (!$reg_request = RegistrationRequest::find()->where(['confirm_code' => $code])->limit(1)->one()) {
             throw new BadRequestHttpException('Incorrect confirm code');
         }
 
@@ -992,11 +1008,11 @@ class ApiController extends Controller
             $reg_request->confirm_code = null;
             $reg_request->save();
 
-            if(!$device = $this->loadDevice()) {
+            if (!$device = $this->loadDevice()) {
                 throw new NotFoundHttpException("Device not found");
             }
 
-            if(!$device->id) {
+            if (!$device->id) {
                 if (!(Yii::$app->request->post('device_id'))) {
                     throw new NotFoundHttpException("Device not registered");
                 }
@@ -1061,7 +1077,7 @@ class ApiController extends Controller
                 //$profile->password = unserialize($reg_request->profile_data)['password'];
 
                 /** @var Product $product */
-                if (!$product = Product::findOne([ 'pid' => \Yii::$app->params['profileNewProductPid'] ])) {
+                if (!$product = Product::findOne(['pid' => \Yii::$app->params['profileNewProductPid']])) {
                     throw new NotFoundHttpException('Product not found');
                 }
 
@@ -1076,7 +1092,7 @@ class ApiController extends Controller
                 $purchase->save();
             } else {
                 // переносим покупки
-                if($purchases = Purchase::find()->where([ 'device_id' => $profile->device_id])->all()) {
+                if ($purchases = Purchase::find()->where(['device_id' => $profile->device_id])->all()) {
                     foreach ($purchases as $pur) {
                         $pur->device_id = $device->id;
                         $pur->save();
@@ -1233,19 +1249,20 @@ class ApiController extends Controller
 //        }
 //    }
 
-    public function actionSetTokens() {
+    public function actionSetTokens()
+    {
         $apns_token = Yii::$app->request->post('apns_token');
         $firebase_token = Yii::$app->request->post('firebase_token');
 
-        if(!$device = $this->loadDevice()) {
+        if (!$device = $this->loadDevice()) {
             throw new NotFoundHttpException("Device not found");
         }
 
-        if($firebase_token) {
+        if ($firebase_token) {
             $device->firebase_token = $firebase_token;
         }
 
-        if($apns_token) {
+        if ($apns_token) {
             $device->apns_token = $apns_token;
         }
 
@@ -1266,7 +1283,7 @@ class ApiController extends Controller
         if ($device = Device::find()->where(['device_token' => $token])->limit(1)->one()) {
             $this_device = $this->loadDevice();
 
-            if($this_device) {
+            if ($this_device) {
                 $device->access_token = $this_device->access_token;
             }
 
@@ -1279,7 +1296,7 @@ class ApiController extends Controller
         // $device = NULL
         // #1
 
-        if(!$device = $this->loadDevice()) {
+        if (!$device = $this->loadDevice()) {
 
             // $device = NULL
             // #2
@@ -1422,6 +1439,7 @@ class ApiController extends Controller
         return 'ok';
 
     }
+
     public function actionDeleteFavorite($profile_id, $company_id)
     {
         $query = Favorite::find()->where(['company_id' => $company_id])->andWhere(['profile_id' => $profile_id])->one();
