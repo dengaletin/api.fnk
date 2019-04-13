@@ -691,14 +691,19 @@ class ApiController extends Controller
 
     public function actionCompanyWithValues($year = null)
     {
-        // $query = 'SELECT * FROM (SELECT * FROM `msfo_company` LEFT JOIN `msfo_company_value` ON msfo_company.id = msfo_company_value.company_id WHERE msfo_company_value.year <= 2017 ORDER BY msfo_company_value.year DESC) msfo_company GROUP BY msfo_company.id';
+        //$query = 'SELECT * FROM (SELECT * FROM `msfo_company` LEFT JOIN `msfo_company_value` ON msfo_company.id = msfo_company_value.company_id WHERE msfo_company_value.year <= 2017 ORDER BY msfo_company_value.year DESC) msfo_company GROUP BY msfo_company.id';
 
-        // $query = 'SELECT * FROM `msfo_company` LEFT JOIN `msfo_company_value` ON msfo_company.id = msfo_company_value.company_id WHERE msfo_company_value.year ='.$year;
+        //$query = 'SELECT * FROM `msfo_company` LEFT JOIN `msfo_company_value` ON msfo_company.id = msfo_company_value.company_id WHERE msfo_company_value.year ='.$year;
 
         if (!$this->isPurchase()) {
-            $query = 'SELECT * FROM (SELECT * FROM `msfo_company` LEFT JOIN `msfo_company_value` ON msfo_company.id = msfo_company_value.company_id WHERE msfo_company.free = 1 AND msfo_company_value.year <= ' . $year . ' ORDER BY msfo_company_value.year DESC) msfo_company GROUP BY msfo_company.id';
+            $query = 'SELECT * FROM 
+(SELECT * FROM `msfo_company` LEFT JOIN `msfo_company_value` 
+ON msfo_company.id = msfo_company_value.company_id 
+WHERE msfo_company.free = 1 
+AND msfo_company_value.year <= ' . $year . ' 
+ORDER BY msfo_company_value.year DESC) msfo_company';
         } else {
-            $query = 'SELECT * FROM (SELECT * FROM `msfo_company` LEFT JOIN `msfo_company_value` ON msfo_company.id = msfo_company_value.company_id WHERE msfo_company_value.year <= ' . $year . ' ORDER BY msfo_company_value.year DESC) msfo_company GROUP BY msfo_company.id';
+            $query = 'SELECT * FROM (SELECT * FROM `msfo_company` LEFT JOIN `msfo_company_value` ON msfo_company.id = msfo_company_value.company_id WHERE msfo_company_value.year <= ' . $year . ' ORDER BY msfo_company_value.year DESC) msfo_company';
         }
         $result = Yii::$app->db->createCommand($query)->queryAll();
         return $result;
