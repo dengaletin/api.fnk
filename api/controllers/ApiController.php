@@ -205,6 +205,29 @@ class ApiController extends Controller
         return (new Serializer())->serialize($provider);
     }
 
+    public function actionPublication($id)
+    {
+        $query = News::find()
+            ->alias('t')
+            ->joinWith(['companies companies'])
+            ->with(['photos', 'companies'])
+            ->where(['t.publish' => 1])
+            ->andFilterWhere(['t.id' => $id])
+            ->groupBy('t.id')
+            ->orderBy(['t.date' => SORT_DESC]);
+
+        $provider = new ActiveDataProvider([
+            'query' => $query,
+            'pagination' => [
+                'class' => Pagination::className(),
+                'pageParam' => 'page',
+                'pageSize' => 20
+            ],
+        ]);
+
+        return (new Serializer())->serialize($provider);
+    }
+
     public function actionCompanies()
     {
         if ($this->isPurchase()) {
@@ -224,11 +247,7 @@ class ApiController extends Controller
 
         return $query->all();
     }
-    //
 
-    /*
-     *
-     */
     public function actionCompaniesVersions()
     {
         $res = [];
