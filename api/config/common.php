@@ -27,11 +27,35 @@ return [
             'class' => 'yii\web\UrlManager',
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            //'enableStrictParsing' => true,
             'rules' => [
                 '<_c:[\w\-]+>' => '<_c>/index',
                 '<_c:[\w\-]+>/<id:\d+>' => '<_c>/view',
                 '<_c:[\w\-]+>/<id:\d+>/<_a:[\w\-]+>' => '<_c>/<_a>',
                 '<_c:[\w\-]+>/<_a:[\w\-]+>' => '<_c>/<_a>',
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'prefix' => 'api',
+                    'controller' => [
+                        'v2/tokens',
+                        'v2/users',
+                        'v2/news',
+                        'v2/companies',
+                    ],
+                ],
+
+                // UsersController
+                'POST api/v2/users/<id:\d+>/email-confirm' => 'v2/users/email-confirm',
+                'POST api/v2/users/<id:\d+>/phone-confirm' => 'v2/users/phone-confirm',
+                'POST api/v2/users/<id:\d+>/email-update-confirm' => 'v2/users/email-update-confirm',
+                'POST api/v2/users/<id:\d+>/phone-update-confirm' => 'v2/users/phone-update-confirm',
+                'POST api/v2/users/<id:\d+>/avatar' => 'v2/users/avatar-create',
+                'POST api/v2/users/<id:\d+>/avatar-update' => 'v2/users/avatar-update',
+                'DELETE api/v2/users/<id:\d+>/avatar' => 'v2/users/avatar-delete',
+
+                //Swagger
+                'GET api/v2/swagger/docs' => 'v2/swagger/docs',
+                'GET api/v2/swagger/json-schema' => 'v2/swagger/json-schema',
             ],
         ],
         'formatter' => [
@@ -64,6 +88,11 @@ return [
         ],
         'log' => [
             'class' => 'yii\log\Dispatcher',
+        ],
+    ],
+    'modules' => [
+        'v2' => [
+            'class' => 'app\modules\v2\Module',
         ],
     ],
     'params' => $params,
