@@ -44,6 +44,11 @@ return [
                     ],
                 ],
 
+                // TokensController
+                'POST api/v2/tokens/email' => 'v2/tokens/email',
+                'POST api/v2/tokens/phone' => 'v2/tokens/phone',
+                'POST api/v2/tokens/oauth' => 'v2/tokens/oauth',
+
                 // UsersController
                 'POST api/v2/users/<id:\d+>/email-confirm' => 'v2/users/email-confirm',
                 'POST api/v2/users/<id:\d+>/phone-confirm' => 'v2/users/phone-confirm',
