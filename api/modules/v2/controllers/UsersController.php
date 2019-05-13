@@ -3,6 +3,7 @@
 namespace app\modules\v2\controllers;
 
 use Yii;
+use yii\filters\auth\CompositeAuth;
 use yii\filters\auth\HttpBearerAuth;
 use yii\rest\Controller;
 use yii\web\BadRequestHttpException;
@@ -17,11 +18,28 @@ use yii\web\UploadedFile;
 class UsersController extends Controller
 {
 
+    public function init()
+    {
+        $user = Yii::$app->user;
+        $user->identityClass = Users::className();
+    }
+
     public function behaviors()
     {
         $behaviors = parent::behaviors();
-        $behaviors['authenticator']['class'] = HttpBearerAuth::className();
-        $behaviors['authenticator']['only'] = ['nope'];
+        $behaviors['authenticator'] = [
+            'class' => CompositeAuth::className(),
+            'authMethods' => [
+                HttpBearerAuth::className()
+            ],
+        ];
+        $behaviors['authenticator']['only'] = [
+            'index',
+            'view',
+            'update',
+            'avatar-create',
+        ];
+
         return $behaviors;
     }
 
@@ -38,8 +56,10 @@ class UsersController extends Controller
      */
     public function actionIndex()
     {
-
-        die();
+        $users = Users::find()->all();
+        if ($users) {
+            return $users;
+        }
     }
 
     /**
@@ -65,16 +85,18 @@ class UsersController extends Controller
     public function actionView($id)
     {
         $user = Users::findById($id);
-        if ($user) {}
-        $data = [
-            'first_name' => $user->first_name,
-            'last_name' => $user->last_name,
-            'email' => $user->email,
-            'email_new' => $user->email_new,
-            'phone' => $user->phone,
-            'phone_new' => $user->phone_new
-
-        ];
+        if ($user) {
+            return [
+                'first_name' => $user->first_name,
+                'last_name' => $user->last_name,
+                'email' => $user->email,
+                'email_new' => $user->email_new,
+                'phone' => $user->phone,
+                'phone_new' => $user->phone_new
+            ];
+        } else {
+            throw new NotFoundHttpException('User with id:' . $id . ' not found');
+        }
     }
 
     /**
@@ -134,16 +156,18 @@ class UsersController extends Controller
     public function actionCreate()
     {
         $user = new Users();
+
         if ($user->load(Yii::$app->request->post(), '')) {
             if ($user->validate()) {
                 $user->email_code = Yii::$app->security->generateRandomString(6);
                 $user->phone_code = Yii::$app->security->generateRandomString(6);
                 $user->bearer_token = Yii::$app->security->generateRandomString();
                 $user->password_hash = Yii::$app->getSecurity()->generatePasswordHash($user->password);
+
                 $user->save();
                 $data = [
                     'id' => $user->id,
-                    'first_name' => $user->first_name,
+                    'first_name' => $user->first_name
                 ];
                 return $data;
             } else {
@@ -157,12 +181,14 @@ class UsersController extends Controller
 
                 return $data;
             }
+        } else {
+            throw new BadRequestHttpException('Required fields empty');
         };
     }
 
     /**
      * @SWG\Patch(
-     *     path="/api/v2/users{id}",
+     *     path="/api/v2/users/{id}",
      *     tags={"User"},
      *     summary="Update user by id",
      *     @SWG\Parameter(

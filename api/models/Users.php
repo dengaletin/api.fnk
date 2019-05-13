@@ -4,6 +4,7 @@ namespace app\models;
 
 use Yii;
 use yii\helpers\FileHelper;
+use yii\web\IdentityInterface;
 
 /**
  * This is the model class for table "msfo_users".
@@ -45,11 +46,36 @@ use yii\helpers\FileHelper;
  * @property string $bearer_token
  * @property string $avatar
  */
-class Users extends \yii\db\ActiveRecord
+class Users extends \yii\db\ActiveRecord implements IdentityInterface
 {
     public $password;
     public $password_repeat;
     public $file;
+
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function getAuthKey()
+    {
+        return $this->bearer_token;
+    }
+
+    public function validateAuthKey($authKey)
+    {
+        return $this->bearer_token === $authKey;
+    }
+
+    public static function findIdentity($id)
+    {
+        return static::findOne($id);
+    }
+
+    public static function findIdentityByAccessToken($token, $type = null)
+    {
+        return static::findOne(['bearer_token' => $token]);
+    }
 
     /**
      * @inheritdoc
@@ -155,10 +181,5 @@ class Users extends \yii\db\ActiveRecord
             $model->file->saveAs($uploadDir . '/' . $model->id . '/' . $folder . '/' . $name);
             return $name;
         }
-    }
-
-    public static function findIdentityByAccessToken($token, $userType = null)
-    {
-        return static::findOne(['bearer_token' => $token]);
     }
 }

@@ -2,27 +2,20 @@
 
 namespace app\modules\v2\controllers;
 
-use app\models\Users;
 use Yii;
-use yii\filters\auth\HttpBearerAuth;
 use yii\rest\Controller;
 
 use yii\web\BadRequestHttpException;
 use yii\web\NotFoundHttpException;
 use yii\web\UnauthorizedHttpException;
 
+use app\models\Users;
+
 /**
  * Class TokensController
  */
 class TokensController extends Controller
 {
-    public function behaviors()
-    {
-        $behaviors = parent::behaviors();
-        $behaviors['authenticator']['class'] = HttpBearerAuth::className();
-        $behaviors['authenticator']['only'] = ['nope'];
-        return $behaviors;
-    }
 
     /**
      * @SWG\Get(path="/api/v2/tokens/email",
@@ -62,6 +55,10 @@ class TokensController extends Controller
         if (!$user = Users::findByEmail($email)) {
             throw new NotFoundHttpException('User with email:' . $email . ' not found');
         }
+
+        if ($user->status == 0) {
+            throw new UnauthorizedHttpException('User status is 0');
+        };
 
         if (Yii::$app->getSecurity()->validatePassword($password, $user->password_hash)) {
             return [
@@ -111,6 +108,10 @@ class TokensController extends Controller
             throw new NotFoundHttpException('User with phone:' . $phone . ' not found');
         }
 
+        if ($user->status == 0) {
+            throw new UnauthorizedHttpException('User status is 0');
+        };
+
         if (Yii::$app->getSecurity()->validatePassword($password, $user->password_hash)) {
             return [
                 'token' => $user->bearer_token,
@@ -118,11 +119,6 @@ class TokensController extends Controller
         } else {
             throw new UnauthorizedHttpException('Wrong password');
         }
-    }
-
-    public function action2fa()
-    {
-        return "2fa";
     }
 
     /**
