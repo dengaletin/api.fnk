@@ -1,8 +1,8 @@
 <?php
 
 return [
-    'adminEmail' => 'admin@example.com',
-    'fromEmail' => 'admin@example.com',
+    'adminEmail' => 'api.ifinik@yandex.ru',
+    'fromEmail' => 'api.ifinik@yandex.ru',
     'adminUsers' => [],
     'purchaseExpireNotifyTimeout' => 3600 * 24 * 2,
     'profileExpireNotifyTimeout' => 3600 * 24 * 2,
