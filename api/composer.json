@@ -25,7 +25,8 @@
         "alxmsl/appstoreclient": "^1.2",
         "2amigos/yii2-file-upload-widget": "~1.0",
         "paragraph1/php-fcm": "^0.7.0",
-        "kartik-v/yii2-widget-select2": "^2.1"
+        "kartik-v/yii2-widget-select2": "^2.1",
+        "yiisoft/yii2-authclient": "^2.2"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "*",
