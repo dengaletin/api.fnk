@@ -38,6 +38,8 @@ class UsersController extends Controller
             'view',
             'update',
             'avatar-create',
+            'avatar-update',
+            'avatar-delete',
         ];
 
         return $behaviors;
@@ -235,6 +237,10 @@ class UsersController extends Controller
      */
     public function actionUpdate($id)
     {
+        if (\Yii::$app->user->id != $id) {
+            throw new BadRequestHttpException('Insufficient permissions');
+        }
+
         if (!$user = Users::find()->where(['id' => $id])->one()) {
             throw new NotFoundHttpException('User with id:' . $id . ' not found');
         }
@@ -526,6 +532,10 @@ class UsersController extends Controller
      */
     public function actionAvatarCreate($id)
     {
+        if (\Yii::$app->user->id != $id) {
+            throw new BadRequestHttpException('Insufficient permissions');
+        }
+
         $user = Users::findById($id);
 
         if (!$user) {
@@ -594,6 +604,10 @@ class UsersController extends Controller
      */
     public function actionAvatarUpdate($id)
     {
+        if (\Yii::$app->user->id != $id) {
+            throw new BadRequestHttpException('Insufficient permissions');
+        }
+
         $user = Users::findById($id);
         $response = \Yii::$app->getResponse();
 
@@ -666,6 +680,10 @@ class UsersController extends Controller
      */
     public function actionAvatarDelete($id)
     {
+        if (\Yii::$app->user->id != $id) {
+            throw new BadRequestHttpException('Insufficient permissions');
+        }
+
         $user = Users::findById($id);
 
         if (!$user->avatar) {
