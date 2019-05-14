@@ -3,6 +3,8 @@
 use yii\helpers\ArrayHelper;
 
 Yii::setAlias('@tests', dirname(__DIR__) . '/tests');
+Yii::setAlias('@users_path', dirname(__DIR__) . '/web/upload/users');
+Yii::setAlias('@apiv2', dirname(__DIR__) . '/modules/v2');
 
 $params = ArrayHelper::merge(
     require(__DIR__ . '/params.php'),
