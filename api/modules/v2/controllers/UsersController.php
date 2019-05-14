@@ -167,6 +167,21 @@ class UsersController extends Controller
                 $user->password_hash = Yii::$app->getSecurity()->generatePasswordHash($user->password);
 
                 $user->save();
+
+                if ($user->phone != null) {
+                    $this->getSmsSender()->send($user->phone, 'Your confirmation code: ' . $user->phone_code);
+                }
+
+                if ($user->email != null) {
+                    try {
+                        Users::sendEmail($user->email, $user->email_code);
+                    }
+                    catch (\Exception $ex) {
+                        $data['errors'] = $ex->getMessage();
+                        return $data;
+                    }
+                }
+
                 $data = [
                     'id' => $user->id,
                     'first_name' => $user->first_name
@@ -704,5 +719,13 @@ class UsersController extends Controller
         } else {
             throw new ServerErrorHttpException ('Failed to delete the file for unknown reason.');
         }
+    }
+
+    /**
+     * @return \app\components\SmsSender
+     */
+    private function getSmsSender()
+    {
+        return Yii::$app->get('smsSender');
     }
 }
