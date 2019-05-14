@@ -182,4 +182,17 @@ class Users extends \yii\db\ActiveRecord implements IdentityInterface
             return $name;
         }
     }
+
+    public static function sendEmail($email, $code)
+    {
+        if (Yii::$app->mailer->compose()
+            ->setFrom('api.ifinik@yandex.ru')
+            ->setTo($email)
+            ->setSubject('Ifinik confirmation code')
+            ->setTextBody("Your confirmation code: "
+                . $code)
+            ->send()) {
+            return true;
+        }
+    }
 }
