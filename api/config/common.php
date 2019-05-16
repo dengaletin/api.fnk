@@ -99,7 +99,7 @@ return [
         'authClientCollection' => [
             'class' => 'yii\authclient\Collection',
             'clients' => [
-                'vkontakte' => [
+                'vk' => [
                     'class' => 'yii\authclient\clients\VKontakte',
                     'clientId' => '6983559',
                     'clientSecret' => 'L9zLQELDcy00oU8UrNLB',
