@@ -40,9 +40,10 @@ class NewsSearch extends News
      */
     public function search($params)
     {
-        $query = News::find()->joinWith(['source source', 'companies companies']);
-
-        // add conditions that should always apply here
+        $query = News::find()
+            ->alias('n')
+            ->joinWith(['source source', 'companies companies'])
+            ->groupBy('n.id');
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -67,15 +68,14 @@ class NewsSearch extends News
             return $dataProvider;
         }
 
-        // grid filtering conditions
         $query->andFilterWhere([
-            'id' => $this->id,
-            'date' => $this->date,
-            'publish' => $this->publish,
+            'n.id' => $this->id,
+            'n.date' => $this->date,
+            'n.publish' => $this->publish,
         ]);
 
-        $query->andFilterWhere(['like', 'title', $this->title])
-            ->andFilterWhere(['like', 'text', $this->text]);
+        $query->andFilterWhere(['like', 'n.title', $this->title])
+            ->andFilterWhere(['like', 'n.text', $this->text]);
 
         return $dataProvider;
     }
