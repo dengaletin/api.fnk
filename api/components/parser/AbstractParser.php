@@ -106,7 +106,9 @@ abstract class AbstractParser
 
                 try
                 {
-                    $model = Factory::saveNews($meta['title'], $this->prepareText($meta['text']), false);
+                    $is_publish = (int)(count($meta['companies']) > 0);
+
+                    $model = Factory::saveNews($meta['title'], $this->prepareText($meta['text']), $is_publish);
 
                     Factory::linkCompanies($model, $meta['companies']);
 
